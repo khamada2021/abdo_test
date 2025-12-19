@@ -1,0 +1,187 @@
+/* Category Page Styles */
+.category-header {
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+    color: white;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    margin-top: 70px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    transition: var(--transition);
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: white;
+    transform: translateX(-5px);
+}
+
+body[dir="rtl"] .back-link:hover {
+    transform: translateX(5px);
+}
+
+.category-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: white;
+}
+
+.category-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.category-equipment {
+    padding: var(--spacing-4xl) var(--spacing-lg);
+    background: var(--light-bg);
+}
+
+.category-equipment .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-2xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-equipment .equipment-card {
+    background: white;
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.category-equipment .equipment-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-gold);
+}
+
+.category-equipment .equipment-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+.category-equipment .equipment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.category-equipment .equipment-card:hover .equipment-image img {
+    transform: scale(1.05);
+}
+
+.card-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--light-bg);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-light);
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+}
+
+.spec-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.spec-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary-navy);
+}
+
+.spec-value.price {
+    color: var(--accent-gold);
+    font-size: 1.25rem;
+}
+
+.why-choose {
+    padding: var(--spacing-4xl) var(--spacing-lg);
+    background: white;
+}
+
+.why-choose .section-title {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-3xl);
+    color: var(--text-dark);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-2xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--light-bg);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-gold);
+}
+
+.benefit-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-dark);
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+
+
+
+
