@@ -1,5 +1,5 @@
 // ============================================
-// Rafe Global Equipment - COMPLETE WORKING SCRIPT
+// Rafe Global Equipment - COMPLETE FIXED SCRIPT
 // ============================================
 
 console.log("🚀 Initializing Rafe Global Equipment Website...");
@@ -12,7 +12,7 @@ let isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.t
 let lastClickTime = 0;
 
 const equipmentDatabase = {
-    1: { name: { en: "Bobcat Loaders", ar: "لوادر بوبكات" }, category: "heavy" },
+    1: { name: { en: "Bobcat Loaders", ar: "محملات بوبكات" }, category: "heavy" },
     2: { name: { en: "Scissor Lifts", ar: "رافعات مقصية" }, category: "access" },
     3: { name: { en: "Mobile Cranes", ar: "رافعات متنقلة" }, category: "heavy" },
     4: { name: { en: "Forklifts", ar: "رافعات شوكية" }, category: "material" },
@@ -39,7 +39,6 @@ function initializeApp() {
         setupRentalModal();
         setupScrollAndNavigation();
         setupBackToTop();
-        setupImageLazyLoading();
         setupPageSpecificFeatures();
         
         // Initialize with current language
@@ -53,7 +52,7 @@ function initializeApp() {
 }
 
 // ============================================
-// 3. LANGUAGE SWITCHER
+// 3. LANGUAGE SWITCHER - UPDATED
 // ============================================
 function setupLanguageSwitcher() {
     console.log("🌐 Setting up language switcher...");
@@ -68,28 +67,17 @@ function setupLanguageSwitcher() {
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
         
+        // Update body class for RTL specific styles
+        document.body.classList.toggle('rtl-layout', lang === 'ar');
+        
         // Update active button
         langButtons.forEach(btn => {
             const btnLang = btn.getAttribute('data-lang');
             btn.classList.toggle('active', btnLang === lang);
-            
-            // Update button text if needed
-            if (btnLang === 'ar') {
-                btn.textContent = lang === 'ar' ? 'EN' : 'AR';
-            }
         });
         
         // Update all translatable elements
         updatePageLanguage();
-        
-        // Update modal content if open
-        const modal = document.getElementById('rentalModal');
-        if (modal && modal.classList.contains('active')) {
-            const equipmentId = modal.querySelector('#rentalEquipmentName').getAttribute('data-equipment-id');
-            if (equipmentId) {
-                updateModalEquipmentName(equipmentId);
-            }
-        }
         
         console.log(`✅ Language changed to: ${lang}`);
     }
@@ -103,7 +91,6 @@ function setupLanguageSwitcher() {
                     element.getAttribute('data-en');
                 
                 if (text && text.trim() !== '') {
-                    // Handle different element types
                     const tagName = element.tagName;
                     
                     if (tagName === 'INPUT' || tagName === 'TEXTAREA') {
@@ -115,39 +102,21 @@ function setupLanguageSwitcher() {
                                element.classList.contains('spec-label') ||
                                element.classList.contains('logo-text') ||
                                element.classList.contains('logo-subtitle')) {
-                        // Don't update these with textContent, they might have HTML
-                        if (element.textContent !== text) {
-                            element.textContent = text;
-                        }
+                        element.textContent = text;
+                    } else if (element.children.length === 0) {
+                        element.textContent = text;
                     } else {
-                        // Check if element has children that should be preserved
-                        if (element.children.length === 0) {
+                        // Check for nested translatable elements
+                        const hasNestedTranslatable = Array.from(element.children).some(child => 
+                            child.hasAttribute('data-en') || child.hasAttribute('data-ar')
+                        );
+                        if (!hasNestedTranslatable) {
                             element.textContent = text;
-                        } else {
-                            // Only update if there are no nested translatable elements
-                            const hasNestedTranslatable = Array.from(element.children).some(child => 
-                                child.hasAttribute('data-en') || child.hasAttribute('data-ar')
-                            );
-                            if (!hasNestedTranslatable) {
-                                element.textContent = text;
-                            }
                         }
                     }
                 }
             }
         });
-    }
-    
-    // Update modal equipment name
-    function updateModalEquipmentName(equipmentId) {
-        const equipment = equipmentDatabase[equipmentId];
-        if (equipment) {
-            const nameElement = document.getElementById('rentalEquipmentName');
-            if (nameElement) {
-                const equipmentName = equipment.name[currentLanguage] || equipment.name.en;
-                nameElement.textContent = equipmentName;
-            }
-        }
     }
     
     // Setup click handlers
@@ -176,7 +145,7 @@ function setupLanguageSwitcher() {
 }
 
 // ============================================
-// 4. MOBILE MENU
+// 4. MOBILE MENU - COMPLETE FIX
 // ============================================
 function setupMobileMenu() {
     console.log("📱 Setting up mobile menu...");
@@ -198,24 +167,16 @@ function setupMobileMenu() {
         menuToggle.classList.toggle('active');
         menuToggle.setAttribute('aria-expanded', isOpening);
         
+        // Toggle body classes for menu state
         if (isOpening) {
             document.body.classList.add('menu-open');
             document.body.style.overflow = 'hidden';
-            // Prevent scrolling
-            document.addEventListener('touchmove', preventScroll, { passive: false });
         } else {
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
-            document.removeEventListener('touchmove', preventScroll);
         }
         
         console.log(`Menu ${isOpening ? 'opened' : 'closed'}`);
-    }
-    
-    function preventScroll(e) {
-        if (navMenu.classList.contains('active')) {
-            e.preventDefault();
-        }
     }
     
     // Close menu function
@@ -225,7 +186,6 @@ function setupMobileMenu() {
         menuToggle.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
-        document.removeEventListener('touchmove', preventScroll);
     }
     
     // Toggle menu when hamburger is clicked
@@ -238,27 +198,32 @@ function setupMobileMenu() {
     // Close menu when clicking on nav links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Only close if it's a hash link (same page navigation)
+            // Check if it's a hash link (same page navigation)
             const href = this.getAttribute('href');
-            if (href && href.includes('#')) {
-                e.preventDefault();
-                const targetId = href.split('#')[1];
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    closeMenu();
+            
+            if (navMenu.classList.contains('active')) {
+                // Close menu first
+                closeMenu();
+                
+                // If it's a hash link on index page, scroll to section after menu closes
+                if (href && href.includes('#') && window.location.pathname.includes('index')) {
+                    e.preventDefault();
+                    const targetId = href.split('#')[1];
                     setTimeout(() => {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }
                     }, 300);
                 }
-            } else {
-                closeMenu();
             }
         });
     });
     
-    // Close menu when clicking outside
+    // Close menu when clicking outside on mobile
     document.addEventListener('click', function(e) {
         if (navMenu.classList.contains('active') && 
+            window.innerWidth <= 992 && 
             !navMenu.contains(e.target) && 
             !menuToggle.contains(e.target)) {
             closeMenu();
@@ -337,30 +302,11 @@ function setupRentalButtons() {
         }
     });
     
-    // Add hover effects for desktop
-    if (!isMobile) {
-        document.addEventListener('mouseover', function(e) {
-            const rentButton = e.target;
-            if (rentButton.classList && rentButton.classList.contains('rent-now')) {
-                rentButton.style.transform = 'translateY(-2px)';
-                rentButton.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-            }
-        });
-        
-        document.addEventListener('mouseout', function(e) {
-            const rentButton = e.target;
-            if (rentButton.classList && rentButton.classList.contains('rent-now')) {
-                rentButton.style.transform = '';
-                rentButton.style.boxShadow = '';
-            }
-        });
-    }
-    
     console.log("✅ Rental buttons setup complete");
 }
 
 // ============================================
-// 6. RENTAL MODAL
+// 6. RENTAL MODAL - FIXED
 // ============================================
 function setupRentalModal() {
     console.log("💰 Setting up rental modal...");
@@ -401,7 +347,7 @@ function setupRentalModal() {
                 `مرحباً رفع العالمية، أنا مهتم بتأجير: ${equipmentName} (رقم المعدة: ${equipmentId})` :
                 `Hello Rafe Global, I'm interested in renting: ${equipmentName} (Equipment ID: ${equipmentId})`;
             
-            const phone = whatsappBtn.href.includes('502345678') ? '966534672153' : '966502345678';
+            const phone = whatsappBtn.href.includes('502345678') ? '966534672153' : '966534672153';
             whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         }
         
@@ -423,9 +369,6 @@ function setupRentalModal() {
         modal.classList.add('active');
         document.body.classList.add('modal-open');
         document.body.style.overflow = 'hidden';
-        
-        // Add focus trap for accessibility
-        trapFocus(modal);
         
         console.log(`✅ Modal opened for: ${equipmentName}`);
     };
@@ -469,36 +412,6 @@ function setupRentalModal() {
             window.closeModal();
         }
     });
-    
-    // Focus trap for accessibility
-    function trapFocus(element) {
-        const focusableElements = element.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstFocusable = focusableElements[0];
-        const lastFocusable = focusableElements[focusableElements.length - 1];
-        
-        element.addEventListener('keydown', function(e) {
-            if (e.key !== 'Tab') return;
-            
-            if (e.shiftKey) {
-                if (document.activeElement === firstFocusable) {
-                    e.preventDefault();
-                    lastFocusable.focus();
-                }
-            } else {
-                if (document.activeElement === lastFocusable) {
-                    e.preventDefault();
-                    firstFocusable.focus();
-                }
-            }
-        });
-        
-        // Focus first element
-        setTimeout(() => {
-            if (firstFocusable) firstFocusable.focus();
-        }, 100);
-    }
     
     console.log("✅ Rental modal setup complete");
 }
@@ -612,21 +525,6 @@ function setupBackToTop() {
     });
 }
 
-function setupImageLazyLoading() {
-    if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
-            if (img.complete) {
-                img.classList.add('loaded');
-            } else {
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded');
-                });
-            }
-        });
-    }
-}
-
 function setupPageSpecificFeatures() {
     const currentPage = window.location.pathname.split('/').pop();
     
@@ -687,25 +585,45 @@ if (document.readyState === 'loading') {
     initializeApp();
 }
 
-// ============================================
-// 10. DEBUG HELPER
-// ============================================
-window.debugButtons = function() {
-    console.log("🔍 DEBUG: Checking all rent buttons");
-    const buttons = document.querySelectorAll('.rent-now, .card-button[data-equipment-id]');
-    buttons.forEach((btn, i) => {
-        console.log(`Button ${i}:`, {
-            text: btn.textContent.trim(),
-            id: btn.getAttribute('data-equipment-id'),
-            class: btn.className,
-            parent: btn.parentElement.className
-        });
-    });
-    
-    console.log("Total rent buttons found:", buttons.length);
-};
+// Add back-to-top styles
+const backToTopStyles = `
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
 
-// Auto-debug on load
-setTimeout(() => {
-    window.debugButtons();
-}, 1000);
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--accent-gold-dark);
+    transform: translateY(-3px);
+}
+`;
+
+// Add styles to head
+if (!document.querySelector('#back-to-top-styles')) {
+    const styleEl = document.createElement('style');
+    styleEl.id = 'back-to-top-styles';
+    styleEl.textContent = backToTopStyles;
+    document.head.appendChild(styleEl);
+}

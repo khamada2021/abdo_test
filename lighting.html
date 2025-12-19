@@ -2,11 +2,16 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lighting Equipment Rental - Light Towers. Powerful illumination solutions for construction sites and outdoor events.">
-    <meta name="keywords" content="lighting equipment, light towers, construction lighting, event lighting">
-    <title>Lighting Equipment Rental | Rafe Global</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="رفع العالمية - Lighting Equipment Rental in Saudi Arabia. Light Towers for construction sites and outdoor events. Reliable, efficient, and cost-effective.">
+    <meta name="keywords" content="lighting equipment rental, light towers, construction lighting, event lighting, Saudi Arabia">
+    <meta name="author" content="Rafe Global Equipment">
+    <meta name="theme-color" content="#fbbf24">
+    <meta property="og:title" content="رفع العالمية - Lighting Equipment Rental">
+    <meta property="og:description" content="Powerful lighting solutions for construction sites and outdoor events">
+    <meta property="og:type" content="website">
+    <title>رفع العالمية - Lighting Equipment Rental | Rafe Global</title>
+    <link rel="stylesheet" href="./css/styles.css?v=2.0">
     <link rel="stylesheet" href="./css/category-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,21 +27,24 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
+            <!-- Logo -->
             <div class="logo-wrapper">
-                <div class="logo-icon">🏗️</div>
-                <div class="logo-text-group">
-                    <span class="logo-text">Rafe Global</span>
-                    <span class="logo-subtitle">Equipment Rental</span>
-                </div>
+                <a href="./index.html#home">
+                    <img src="assets/rafe_global_logo_concept_3.png" alt="Rafe Global Logo" class="logo-img">
+                </a>
             </div>
 
-            <div class="nav-menu" id="navMenu">
-                <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
-                <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">Equipment</a>
-                <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
-                <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-            </div>
+           <!-- Navigation links -->
+<div class="nav-menu" id="navMenu">
+    <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">Equipment</a>
+    <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a>
+    <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
+    <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+    <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+</div>
 
+            <!-- Mobile menu toggle -->
             <div class="nav-actions">
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
@@ -52,7 +60,7 @@
         <div class="container">
             <a href="./index.html" class="back-link" data-en="← Back to All Equipment" data-ar="← العودة إلى جميع المعدات">← Back to All Equipment</a>
             <h1 class="category-title" data-en="Lighting Equipment" data-ar="معدات الإضاءة">Lighting Equipment</h1>
-            <p class="category-description" data-en="Powerful illumination solutions for construction sites, outdoor events, and emergency operations. Reliable, efficient, and cost-effective." data-ar="حلول إضاءة قوية لمواقع البناء والفعاليات الخارجية والعمليات الطارئة.">Powerful illumination solutions for construction sites, outdoor events, and emergency operations.</p>
+            <p class="category-description" data-en="Powerful illumination solutions for construction sites, outdoor events, and emergency operations. Reliable, efficient, and cost-effective." data-ar="حلول إضاءة قوية لمواقع البناء والفعاليات الخارجية والعمليات الطارئة. موثوقة وفعالة ومجدية التكلفة">Powerful illumination solutions for construction sites, outdoor events, and emergency operations.</p>
         </div>
     </section>
 
@@ -112,48 +120,6 @@
         </div>
     </section>
 
-    <!-- Equipment Details Modal -->
-    <div class="modal" id="equipmentModal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-header">
-                <h2 id="modalTitle">Equipment Name</h2>
-            </div>
-            <div class="modal-body">
-                <div class="modal-image-container" id="modalImageContainer"></div>
-                <p id="modalDescription">Equipment description will appear here</p>
-                <div class="equipment-specs">
-                    <div class="spec-item">
-                        <span class="spec-label" data-en="Capacity" data-ar="السعة">Capacity</span>
-                        <span class="spec-value" id="specCapacity">-</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label" data-en="Daily Rate" data-ar="السعر اليومي">Daily Rate</span>
-                        <span class="spec-value" id="specRate">-</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label" data-en="Availability" data-ar="التوفر">Availability</span>
-                        <span class="spec-value" id="specAvail">In Stock</span>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="https://wa.me/966502345678" class="modal-contact whatsapp" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.468.694-2.74 1.662-3.682 2.87-.943 1.209-1.478 2.57-1.478 4.046 0 1.487.516 2.92 1.451 4.115l-1.542 5.624 5.787-1.514c1.148.681 2.467 1.041 3.85 1.041 5.169 0 9.379-4.21 9.379-9.379 0-2.505-.962-4.856-2.708-6.63-1.746-1.775-4.066-2.753-6.514-2.753"/>
-                    </svg>
-                    <span data-en="WhatsApp (Primary)" data-ar="واتساب (أساسي)">WhatsApp (Primary)</span>
-                </a>
-                <a href="mailto:info@rafeglobal.com" class="modal-contact email">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                    <span data-en="Email Us" data-ar="راسلنا عبر البريد">Email Us</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- Rental Contact Modal -->
     <div class="modal" id="rentalModal">
         <div class="modal-content rental-modal">
@@ -165,13 +131,13 @@
             <div class="modal-body">
                 <p class="rental-intro" data-en="Choose your preferred contact method:" data-ar="اختر طريقة الاتصال المفضلة لديك:">Choose your preferred contact method:</p>
                 <div class="rental-buttons">
-                    <a href="https://wa.me/966502345678" class="rental-btn whatsapp-main" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/966534672153" class="rental-btn whatsapp-main" target="_blank" rel="noopener noreferrer">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.468.694-2.74 1.662-3.682 2.87-.943 1.209-1.478 2.57-1.478 4.046 0 1.487.516 2.92 1.451 4.115l-1.542 5.624 5.787-1.514c1.148.681 2.467 1.041 3.85 1.041 5.169 0 9.379-4.21 9.379-9.379 0-2.505-.962-4.856-2.708-6.63-1.746-1.775-4.066-2.753-6.514-2.753"/>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
                         </svg>
                         <div>
                             <div class="btn-title" data-en="Chat on WhatsApp" data-ar="تحدث على واتساب">Chat on WhatsApp</div>
-                            <div class="btn-subtitle" data-en="Fast & Easy" data-ar="سريع وسهل">Fast & Easy</div>
+                            <div class="btn-subtitle">+966 53 467 2153</div>
                         </div>
                     </a>
                     <a href="mailto:info@rafeglobal.com" class="rental-btn email-btn">
@@ -188,14 +154,18 @@
         </div>
     </div>
 
-       <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-bottom">
-            <p>© 2024 Rafe Global Equipment. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-en="© 2024 Rafe Global Equipment. All rights reserved." data-ar="© 2024 رفع العالمية للمعدات. جميع الحقوق محفوظة.">© 2024 Rafe Global Equipment. All rights reserved.</p>
+            </div>
         </div>
-    </div>
-</footer>
-    <script src="./js/script.js"></script>
+    </footer>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
+    <script src="./js/script.js?v=2.1"></script>
 </body>
 </html>

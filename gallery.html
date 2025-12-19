@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="رفع العالمية - Gallery of our equipment and projects in Saudi Arabia. See our machinery in action and our completed projects.">
+    <meta name="keywords" content="equipment gallery, construction projects, machinery photos, Saudi Arabia">
+    <meta name="author" content="Rafe Global Equipment">
+    <meta name="theme-color" content="#fbbf24">
+    <meta property="og:title" content="رفع العالمية - Gallery">
+    <meta property="og:description" content="Gallery of our equipment and projects">
+    <meta property="og:type" content="website">
+    <title>رفع العالمية - Gallery | Rafe Global</title>
+    <link rel="stylesheet" href="./css/styles.css?v=2.0">
+    <link rel="stylesheet" href="./css/category-styles.css">
+    <link rel="stylesheet" href="./css/gallery-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a href="./index.html#home">
+                    <img src="assets/rafe_global_logo_concept_3.png" alt="Rafe Global Logo" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">Equipment</a>
+                <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a>
+                <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
+                <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+                <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+            </div>
+
+            <!-- Mobile menu toggle -->
+            <div class="nav-actions">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="category-header">
+        <div class="container">
+            <a href="./index.html" class="back-link" data-en="← Back to Home" data-ar="← العودة إلى الرئيسية">← Back to Home</a>
+            <h1 class="category-title" data-en="Our Gallery" data-ar="معرض الصور">Our Gallery</h1>
+            <p class="category-description" data-en="Explore our equipment in action and see our completed projects across Saudi Arabia." data-ar="استكشف معداتنا أثناء العمل وشاهد مشاريعنا المكتملة في جميع أنحاء المملكة العربية السعودية">Explore our equipment in action and see our completed projects across Saudi Arabia.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filter" id="galleryFilter">
+                <button class="filter-btn active" data-filter="all" data-en="All" data-ar="الكل">All</button>
+                <button class="filter-btn" data-filter="heavy" data-en="Heavy Equipment" data-ar="معدات ثقيلة">Heavy Equipment</button>
+                <button class="filter-btn" data-filter="access" data-en="Access Equipment" data-ar="معدات الوصول">Access Equipment</button>
+                <button class="filter-btn" data-filter="projects" data-en="Projects" data-ar="المشاريع">Projects</button>
+                <button class="filter-btn" data-filter="clients" data-en="Client Projects" data-ar="مشاريع العملاء">Client Projects</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Image 1 - Heavy Equipment -->
+                <div class="gallery-item" data-category="heavy">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/heavy1.jpeg" alt="Heavy equipment at work" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Heavy Equipment in Action" data-ar="معدات ثقيلة في العمل">Heavy Equipment in Action</h3>
+                                <p data-en="Our machinery performing at project site" data-ar="معداتنا تعمل في موقع المشروع">Our machinery performing at project site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2 - Access Equipment -->
+                <div class="gallery-item" data-category="access">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/access1.jpeg" alt="Access equipment at work" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Access Equipment Operation" data-ar="تشغيل معدات الوصول">Access Equipment Operation</h3>
+                                <p data-en="Equipment performing at height" data-ar="المعدات تعمل على ارتفاع">Equipment performing at height</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3 - Projects -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/work2.jpeg" alt="Construction project site" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Project Site Overview" data-ar="نظرة عامة على موقع المشروع">Project Site Overview</h3>
+                                <p data-en="Our equipment working on construction project" data-ar="معداتنا تعمل في مشروع البناء">Our equipment working on construction project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 4 - Heavy Equipment -->
+                <div class="gallery-item" data-category="heavy">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/work4.jpeg" alt="Equipment performing work" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Construction Equipment Working" data-ar="معدات البناء في العمل">Construction Equipment Working</h3>
+                                <p data-en="Machinery performing ground work" data-ar="المعدات تقوم بأعمال الأرض">Machinery performing ground work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 5 - Client Projects -->
+                <div class="gallery-item" data-category="clients">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/5.jpeg" alt="Equipment at client site" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Equipment at Work" data-ar="المعدات في العمل">Equipment at Work</h3>
+                                <p data-en="Our machinery performing on site" data-ar="معداتنا تعمل في الموقع">Our machinery performing on site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 6 - Access Equipment -->
+                <div class="gallery-item" data-category="access">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/8.jpeg" alt="Aerial equipment operation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Aerial Work Platform" data-ar="منصة العمل الجوية">Aerial Work Platform</h3>
+                                <p data-en="Equipment performing elevated tasks" data-ar="المعدات تؤدي مهام مرتفعة">Equipment performing elevated tasks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 7 - Projects -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/work3.jpeg" alt="Construction equipment working" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Construction Site Operations" data-ar="عمليات موقع البناء">Construction Site Operations</h3>
+                                <p data-en="Our equipment working on project" data-ar="معداتنا تعمل في المشروع">Our equipment working on project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 8 - Client Projects -->
+                <div class="gallery-item" data-category="clients">
+                    <div class="gallery-image">
+                        <img src="./assets/gallery/work1.jpeg" alt="Equipment performing work" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3 data-en="Site Work in Progress" data-ar="العمل جار في الموقع">Site Work in Progress</h3>
+                                <p data-en="Our equipment performing construction work" data-ar="معداتنا تؤدي أعمال البناء">Our equipment performing construction work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="gallery-load-more">
+                <button class="card-button view-details" id="loadMoreBtn" data-en="Load More Photos" data-ar="تحميل المزيد من الصور">Load More Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery - UPDATED FOR DIRECT VIDEO PLAYBACK -->
+    <section class="why-choose" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title" data-en="Video Gallery" data-ar="معرض الفيديو">Video Gallery</h2>
+            <p class="section-description" style="text-align: center; max-width: 700px; margin: 0 auto var(--spacing-3xl);" data-en="Watch our equipment in action and see how we deliver results" data-ar="شاهد معداتنا أثناء العمل ورؤية كيفية تقديمنا للنتائج">Watch our equipment in action and see how we deliver results</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 - Direct Video Playback -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <div class="video-container">
+                            <video controls poster="./assets/gallery/video-thumb1.jpg" preload="metadata">
+                                <source src="./assets/gallery/video-thumb1.mp4" type="video/mp4">
+                                <source src="./assets/gallery/video-thumb1.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3 data-en="Equipment Operation" data-ar="تشغيل المعدات">Equipment Operation</h3>
+                        <p data-en="Watch our equipment at work" data-ar="شاهد معداتنا في العمل">Watch our equipment at work</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 - Direct Video Playback -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <div class="video-container">
+                            <video controls poster="./assets/gallery/video-thumb2.jpg" preload="metadata">
+                                <source src="./assets/gallery/video-thumb2.mp4" type="video/mp4">
+                                <source src="./assets/gallery/video-thumb2.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3 data-en="Machinery at Work" data-ar="المعدات في العمل">Machinery at Work</h3>
+                        <p data-en="See our machinery performing tasks" data-ar="شاهد معداتنا تؤدي المهام">See our machinery performing tasks</p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 - Direct Video Playback -->
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <div class="video-container">
+                            <video controls poster="./assets/gallery/video-thumb3.jpg" preload="metadata">
+                                <source src="./assets/gallery/video-thumb3.mp4" type="video/mp4">
+                                <source src="./assets/gallery/video-thumb3.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3 data-en="Equipment in Use" data-ar="المعدات قيد الاستخدام">Equipment in Use</h3>
+                        <p data-en="Our equipment performing on site" data-ar="معداتنا تعمل في الموقع">Our equipment performing on site</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WhatsApp Contact for Videos -->
+            <div class="service-contact" style="text-align: center; margin-top: var(--spacing-3xl);">
+                <a href="https://wa.me/966534672153?text=Hello%20Rafe%20Global,%20I%20want%20more%20information%20about%20your%20equipment%20from%20the%20video%20gallery." 
+                   target="_blank" 
+                   class="whatsapp-button"
+                   data-en="Need More Videos? Contact on WhatsApp" 
+                   data-ar="تحتاج المزيد من الفيديوهات؟ تواصل عبر واتساب">
+                    Need More Videos? Contact on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Modal -->
+    <div class="modal" id="galleryModal">
+        <div class="modal-content gallery-modal">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="gallery-modal-content">
+                <div class="gallery-modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="gallery-modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+                <div class="gallery-modal-nav">
+                    <button class="gallery-nav-btn" id="prevBtn" aria-label="Previous image">←</button>
+                    <button class="gallery-nav-btn" id="nextBtn" aria-label="Next image">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-en="© 2024 Rafe Global Equipment. All rights reserved." data-ar="© 2024 رفع العالمية للمعدات. جميع الحقوق محفوظة.">© 2024 Rafe Global Equipment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
+    <script src="./js/script.js?v=2.1"></script>
+    <script src="./js/gallery-script.js"></script>
+</body>
+</html>

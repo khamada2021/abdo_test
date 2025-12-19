@@ -1,20 +1,23 @@
-/* Category Page Styles */
+/* Category Pages (Services & Gallery) */
 .category-header {
-    background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+    padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-3xl);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
     color: white;
-    padding: var(--spacing-3xl) var(--spacing-lg);
-    margin-top: 70px;
     text-align: center;
+}
+
+.category-header .container {
+    max-width: 800px;
 }
 
 .back-link {
     display: inline-block;
     color: var(--accent-gold);
-    font-weight: 700;
+    text-decoration: none;
+    font-weight: 600;
     margin-bottom: var(--spacing-lg);
     transition: var(--transition);
     font-size: 0.95rem;
-    text-decoration: none;
 }
 
 .back-link:hover {
@@ -27,116 +30,182 @@ body[dir="rtl"] .back-link:hover {
 }
 
 .category-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3rem;
+    font-weight: 900;
     margin-bottom: var(--spacing-lg);
     color: white;
+    line-height: 1.2;
 }
 
 .category-description {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
 }
 
+/* Services Grid */
 .category-equipment {
     padding: var(--spacing-4xl) var(--spacing-lg);
-    background: var(--light-bg);
+    background: white;
 }
 
-.category-equipment .equipment-grid {
+.equipment-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-2xl);
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.category-equipment .equipment-card {
+.equipment-card {
     background: white;
-    border-radius: var(--radius-2xl);
-    padding: var(--spacing-xl);
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
+    border-radius: var(--radius-xl);
     overflow: hidden;
     border: 2px solid var(--border-light);
+    transition: var(--transition);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
 }
 
-.category-equipment .equipment-card:hover {
+.equipment-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
     border-color: var(--accent-gold);
 }
 
-.category-equipment .equipment-image {
+.equipment-image {
     width: 100%;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
-    border-radius: var(--radius-lg);
+    background: var(--light-bg);
 }
 
-.category-equipment .equipment-image img {
+.equipment-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
 
-.category-equipment .equipment-card:hover .equipment-image img {
+.equipment-card:hover .equipment-image img {
     transform: scale(1.05);
 }
 
+.equipment-card .card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: var(--spacing-lg) var(--spacing-lg) var(--spacing-sm);
+}
+
+.equipment-card .card-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 var(--spacing-lg) var(--spacing-lg);
+    flex-grow: 1;
+}
+
 .card-specs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
     padding: var(--spacing-lg);
-    background: var(--light-bg);
-    border-radius: var(--radius-lg);
-    border: 2px solid var(--border-light);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: var(--spacing-lg);
 }
 
 .spec {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.spec:last-child {
+    margin-bottom: 0;
 }
 
 .spec-label {
-    font-size: 0.8rem;
-    color: var(--text-light);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
 }
 
 .spec-value {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--primary-navy);
-}
-
-.spec-value.price {
     color: var(--accent-gold);
-    font-size: 1.25rem;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
+.card-button {
+    margin: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+/* WhatsApp Button Styles for both pages */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background-color: #25D366;
+    color: white;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: var(--spacing-lg);
+    min-width: 200px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.whatsapp-button:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M17.507 14.307l-.009.075c-.266-1.118-1.445-1.978-2.553-1.734l-5.578 1.35a4.987 4.987 0 0 0-2.745 1.574A8.28 8.28 0 0 1 4.61 16.33c-1.235.428-2.023 1.66-1.822 2.94l.112.673c.122.735.654 1.332 1.383 1.527 2.528.678 5.318.94 8.11.783 6.803-.384 12.287-5.822 12.6-12.624.093-2.02-.577-4.03-1.89-5.654-1.312-1.623-3.192-2.77-5.3-3.175-1.548-.293-3.14-.173-4.627.35-.99.35-1.87.92-2.57 1.66-1.1 1.16-1.82 2.62-2.08 4.19-.18 1.08-.1 2.19.23 3.24.33 1.05.93 2.01 1.75 2.79.52.5 1.12.9 1.77 1.19.65.29 1.35.47 2.06.52.71.05 1.42-.02 2.11-.2.69-.18 1.34-.48 1.92-.88z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.whatsapp-button.large {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    font-size: 1.1rem;
+    min-width: 250px;
+}
+
+.whatsapp-service {
+    background-color: #25D366 !important;
+    border-color: #25D366 !important;
+    color: white !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+}
+
+.whatsapp-service:hover {
+    background-color: #128C7E !important;
+    border-color: #128C7E !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Why Choose Section */
 .why-choose {
     padding: var(--spacing-4xl) var(--spacing-lg);
-    background: white;
-}
-
-.why-choose .section-title {
-    text-align: center;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: var(--spacing-3xl);
-    color: var(--text-dark);
+    background: var(--primary-dark);
+    color: white;
 }
 
 .benefits-grid {
@@ -144,44 +213,139 @@ body[dir="rtl"] .back-link:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-2xl);
     max-width: 1200px;
-    margin: 0 auto;
+    margin: var(--spacing-2xl) auto 0;
 }
 
 .benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
     text-align: center;
-    padding: var(--spacing-2xl);
-    background: var(--light-bg);
-    border-radius: var(--radius-xl);
-    border: 2px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
 }
 
 .benefit-card:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
 }
 
 .benefit-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--accent-gold);
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    color: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin: 0 auto var(--spacing-lg);
 }
 
 .benefit-card h3 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
     font-size: 1.2rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--text-dark);
 }
 
 .benefit-card p {
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 768px) {
+    .category-header {
+        padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-2xl);
+    }
+    
+    .category-title {
+        font-size: 2.5rem;
+    }
+    
+    .category-description {
+        font-size: 1.1rem;
+    }
+    
+    .equipment-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .equipment-image {
+        height: 180px;
+    }
+    
+    .whatsapp-button {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 0.95rem;
+        min-width: 180px;
+    }
+    
+    .whatsapp-button.large {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: 1rem;
+        min-width: 220px;
+    }
+}
 
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 2rem;
+    }
+    
+    .category-description {
+        font-size: 1rem;
+    }
+    
+    .equipment-image {
+        height: 160px;
+    }
+    
+    .benefit-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .whatsapp-button {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: 0.9rem;
+        min-width: 160px;
+    }
+    
+    .whatsapp-button.large {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 0.95rem;
+        min-width: 200px;
+    }
+}
 
+/* RTL Support */
+body[dir="rtl"] .back-link {
+    direction: rtl;
+}
 
+body[dir="rtl"] .spec {
+    flex-direction: row-reverse;
+}
 
+body[dir="rtl"] .whatsapp-button:before {
+    transform: rotateY(180deg);
+}
