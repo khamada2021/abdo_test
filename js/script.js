@@ -41,6 +41,9 @@ function initializeApp() {
         setupBackToTop();
         setupPageSpecificFeatures();
         
+        // NEW: Add WhatsApp button setup
+        setupWhatsAppButton();
+        
         // Initialize with current language
         updatePageLanguage();
         
@@ -78,6 +81,9 @@ function setupLanguageSwitcher() {
         
         // Update all translatable elements
         updatePageLanguage();
+        
+        // NEW: Update WhatsApp button text
+        updateWhatsAppButtonText();
         
         console.log(`✅ Language changed to: ${lang}`);
     }
@@ -503,7 +509,7 @@ function setupScrollAndNavigation() {
 }
 
 // ============================================
-// 8. HELPER FUNCTIONS
+// 8. BACK TO TOP
 // ============================================
 function setupBackToTop() {
     const backToTop = document.createElement('button');
@@ -525,6 +531,9 @@ function setupBackToTop() {
     });
 }
 
+// ============================================
+// 9. PAGE SPECIFIC FEATURES
+// ============================================
 function setupPageSpecificFeatures() {
     const currentPage = window.location.pathname.split('/').pop();
     
@@ -540,6 +549,76 @@ function setupPageSpecificFeatures() {
     }
 }
 
+// ============================================
+// 10. WHATSAPP FLOATING BUTTON - NEW
+// ============================================
+function setupWhatsAppButton() {
+    console.log("💬 Setting up WhatsApp floating button...");
+    
+    // Create WhatsApp button if it doesn't exist
+    if (!document.querySelector('.whatsapp-container')) {
+        const whatsappHTML = `
+            <div class="whatsapp-container">
+                <a href="https://wa.me/+966534672153" 
+                   class="whatsapp-float" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp">
+                    <div class="whatsapp-icon-wrapper">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.032,12.366c-0.344,0.196-0.693,0.406-0.693,0.815c0,0.406,0.554,0.815,0.901,1.08 c0.348,0.266,0.826,0.406,1.297,0.406c0.48,0,0.934-0.154,1.297-0.406c0.365-0.25,0.901-0.683,0.901-1.08 c0-0.409-0.357-0.619-0.693-0.815c-0.339-0.196-0.826-0.406-1.505-0.406C12.858,11.96,12.371,12.17,12.032,12.366z M17.606,6.384 c-2.199-2.199-5.297-3.231-8.28-2.704C6.242,4.161,4.264,5.664,3.054,7.734C1.845,9.804,1.5,12.246,2.083,14.5 c0.009,0.035,0.021,0.069,0.035,0.102l-1.399,5.114l5.151-1.366c0.035,0.015,0.071,0.027,0.107,0.037 c2.258,0.583,4.704,0.238,6.774-0.971c2.07-1.21,3.573-3.188,4.054-5.272C20.837,11.681,19.805,8.583,17.606,6.384z M16.656,15.358 c-1.836,1.074-4.006,1.441-6.083,1.04l-0.108-0.024l-0.104,0.027l-3.746,0.992l0.998-3.647l0.026-0.095l-0.022-0.102 c-0.402-2.077-0.034-4.247,1.04-6.083c1.074-1.836,2.876-2.964,4.844-3.118c1.967-0.154,3.914,0.564,5.277,1.927 c1.363,1.363,2.081,3.31,1.927,5.277C19.619,12.482,18.492,14.284,16.656,15.358z"/>
+                        </svg>
+                        <div class="whatsapp-pulse"></div>
+                    </div>
+                    <div class="whatsapp-tooltip">
+                        <span data-en="Chat with us on WhatsApp" data-ar="تحدث معنا عبر واتساب">Chat with us on WhatsApp</span>
+                        <span class="whatsapp-number">+966 53 467 2153</span>
+                    </div>
+                </a>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', whatsappHTML);
+        console.log("✅ WhatsApp button created");
+    }
+    
+    // Add click animation
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function(e) {
+            // Add click feedback animation
+            const iconWrapper = this.querySelector('.whatsapp-icon-wrapper');
+            if (iconWrapper) {
+                iconWrapper.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    iconWrapper.style.transform = '';
+                }, 150);
+            }
+            
+            // Log click for analytics
+            console.log("💬 WhatsApp button clicked");
+        });
+    }
+    
+    console.log("✅ WhatsApp floating button setup complete");
+}
+
+// ============================================
+// 11. WHATSAPP BUTTON TEXT UPDATER - NEW
+// ============================================
+function updateWhatsAppButtonText() {
+    const tooltip = document.querySelector('.whatsapp-tooltip span');
+    if (tooltip && tooltip.hasAttribute('data-en') && tooltip.hasAttribute('data-ar')) {
+        const text = currentLanguage === 'ar' ? 
+            tooltip.getAttribute('data-ar') : 
+            tooltip.getAttribute('data-en');
+        if (text) tooltip.textContent = text;
+    }
+}
+
+// ============================================
+// 12. HELPER FUNCTIONS
+// ============================================
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -577,7 +656,7 @@ function debounce(func, wait) {
 }
 
 // ============================================
-// 9. START THE APPLICATION
+// 13. START THE APPLICATION
 // ============================================
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
@@ -585,45 +664,4 @@ if (document.readyState === 'loading') {
     initializeApp();
 }
 
-// Add back-to-top styles
-const backToTopStyles = `
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: var(--accent-gold);
-    color: var(--text-dark);
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
-}
-
-.back-to-top.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.back-to-top:hover {
-    background: var(--accent-gold-dark);
-    transform: translateY(-3px);
-}
-`;
-
-// Add styles to head
-if (!document.querySelector('#back-to-top-styles')) {
-    const styleEl = document.createElement('style');
-    styleEl.id = 'back-to-top-styles';
-    styleEl.textContent = backToTopStyles;
-    document.head.appendChild(styleEl);
-}
+console.log("✅ All scripts loaded successfully!");
