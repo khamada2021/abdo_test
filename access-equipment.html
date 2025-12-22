@@ -1,17 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="رفع العالمية - Leading equipment rental provider in Saudi Arabia. Premium construction machinery, competitive pricing, and professional service.">
-    <meta name="keywords" content="equipment rental, construction machinery, cranes, forklifts, lifts, heavy equipment, Saudi Arabia, Riyadh">
-    <meta name="author" content="Rafe Global Equipment">
-    <meta name="theme-color" content="#fbbf24">
-    <meta property="og:title" content="رفع العالمية - Premium Equipment Rental">
-    <meta property="og:description" content="Leading equipment rental provider with premium machinery and professional service">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="تأجير معدات الوصول والارتفاع في السعودية - منصات رفع مقصية، رافعات أشخاص، رافعات ذراعية. معدات آمنة لأعمال الصيانة والتركيب على المرتفعات.">
+    <meta name="keywords" content="تأجير معدات وصول, تأجير منصات رفع, تأجير رافعات أشخاص, تأجير رافعات ذراعية, معدات ارتفاع, تأجير في الرياض, معدات وصول آمنة, Rafe Global, access equipment rental Saudi Arabia">
+    <meta name="author" content="رفع العالمية - تأجير معدات الوصول">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="تأجير معدات الوصول والارتفاع في السعودية | رفع العالمية">
+    <meta property="og:description" content="تأجير معدات الوصول الآمنة لأعمال الصيانة والتركيب على المرتفعات في المملكة العربية السعودية.">
     <meta property="og:type" content="website">
-    <title>رفع العالمية - Access Equipment Rental | Rafe Global</title>
-    <link rel="stylesheet" href="./css/styles.css?v=2.0">
+    <meta property="og:url" content="https://rafeglobal.com/access-equipment.html">
+    
+    <!-- Canonical and Language -->
+    <link rel="canonical" href="https://rafeglobal.com/access-equipment.html">
+    <link rel="alternate" hreflang="ar" href="https://rafeglobal.com/access-equipment.html">
+    <link rel="alternate" hreflang="en" href="https://rafeglobal.com/access-equipment.html?lang=en">
+    
+    <meta name="theme-color" content="#fbbf24">
+    <title>تأجير معدات الوصول والارتفاع في السعودية | منصات رفع | رافعات أشخاص | رفع العالمية</title>
+    
+    <!-- Schema for Access Equipment -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "تأجير معدات الوصول والارتفاع في السعودية",
+      "description": "صفحة تأجير معدات الوصول والارتفاع من شركة رفع العالمية - تأجير منصات رفع مقصية، رافعات أشخاص، رافعات ذراعية",
+      "url": "https://rafeglobal.com/access-equipment.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://rafeglobal.com/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "معدات الوصول",
+          "item": "https://rafeglobal.com/access-equipment.html"
+        }]
+      },
+      "mainEntity": [{
+        "@type": "Product",
+        "name": "منصات رفع مقصية",
+        "description": "تأجير منصات رفع مقصية آمنة لأعمال الصيانة والتركيب على المرتفعات",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "SAR"
+        }
+      }]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="./css/styles.css?v=2.1">
     <link rel="stylesheet" href="./css/category-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,31 +67,35 @@
 <body>
     <!-- Language Switcher -->
     <div class="language-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn active" data-lang="ar" aria-label="العربية">AR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
     </div>
-    
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <!-- Logo -->
             <div class="logo-wrapper">
                 <a href="./index.html#home">
-                    <img src="assets/rafe_global_logo_concept_3.png" alt="Rafe Global Logo" class="logo-img">
+                    <img src="assets/rafe_global_logo_concept_3.png" 
+                         alt="شعار رفع العالمية - تأجير معدات الوصول" 
+                         class="logo-img">
                 </a>
             </div>
 
             <!-- Navigation links -->
             <div class="nav-menu" id="navMenu">
-                <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
-                <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">Equipment</a>
-                <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
-                <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+                <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
+                <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">المعدات</a>
+                <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a>
+                <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">معرض الصور</a>
+                <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">لماذا نحن</a>
+                <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a>
             </div>
 
             <!-- Mobile menu toggle -->
             <div class="nav-actions">
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="فتح/إغلاق القائمة">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -56,12 +107,36 @@
     <!-- Category Header -->
     <section class="category-header">
         <div class="container">
-            <a href="./index.html" class="back-link" data-en="← Back to All Equipment" data-ar="← العودة إلى جميع المعدات">← Back to All Equipment</a>
-            <h1 class="category-title" data-en="Access Equipment" data-ar="معدات الوصول">Access Equipment</h1>
-            <p class="category-description" data-en="Safe elevated work platforms for maintenance, painting, and installation. Professional-grade equipment with full safety features." data-ar="منصات عمل آمنة مرتفعة للصيانة والطلاء والتركيب. معدات من الدرجة الاحترافية مع ميزات سلامة كاملة">Safe elevated work platforms for maintenance, painting, and installation.</p>
+            <a href="./index.html" class="back-link" data-en="← Back to All Equipment" data-ar="← العودة إلى جميع المعدات">← العودة إلى جميع المعدات</a>
+            <h1 class="category-title" data-en="Access Equipment" data-ar="معدات الوصول">تأجير معدات الوصول والارتفاع في السعودية</h1>
+            <p class="category-description" data-en="Safe elevated work platforms for maintenance, painting, and installation" data-ar="منصات عمل آمنة مرتفعة للصيانة والطلاء والتركيب مع ميزات سلامة كاملة">منصات عمل آمنة مرتفعة للصيانة والطلاء والتركيب. معدات من الدرجة الاحترافية مع ميزات سلامة كاملة.</p>
+        </div>
+        
+        <!-- Hidden SEO Content -->
+        <div class="seo-content" style="display: none;">
+            <h2>تأجير معدات الوصول والارتفاع للمشاريع والمنشآت</h2>
+            <p>تقدم شركة <strong>رفع العالمية</strong> خدمة تأجير معدات الوصول والارتفاع الآمنة للوصول إلى الأماكن المرتفعة في المشاريع الإنشائية والمنشآت الصناعية والتجارية في المملكة العربية السعودية.</p>
+            
+            <h3>أنواع معدات الوصول المتوفرة للايجار:</h3>
+            <ul>
+                <li><strong>منصات رفع مقصية (Scissor Lifts)</strong> - للوصول الأفقي على ارتفاعات متوسطة</li>
+                <li><strong>رافعات أشخاص (Man Lifts)</strong> - لرفع العمال لأعمال الصيانة</li>
+                <li><strong>رافعات ذراعية (Boom Lifts)</strong> - للوصول إلى أماكن يصعب الوصول إليها</li>
+                <li><strong>سلال عمل مرتفعة (Work Platforms)</strong> - لأعمال التركيب والفحص</li>
+                <li><strong>سقالات متحركة (Mobile Scaffolds)</strong> - لأعمال البناء والديكور</li>
+            </ul>
+            
+            <h3>مميزات معدات الوصول لدينا:</h3>
+            <ul>
+                <li>جميع المعدات مطابقة لمعايير السلامة العالمية</li>
+                <li>فحص دوري قبل وبعد كل عملية تأجير</li>
+                <li>مشغلين معتمدين لتشغيل المعدات</li>
+                <li>توصيل المعدات إلى موقع العمل</li>
+                <li>دعم فني متواصل 24/7</li>
+            </ul>
         </div>
     </section>
-    
+
     <!-- Equipment Grid -->
     <section class="category-equipment">
         <div class="container">
@@ -69,157 +144,145 @@
                 <!-- Scissor Lifts -->
                 <div class="equipment-card" data-equipment-id="2">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/scissor-lift.png" alt="Scissor Lift" loading="lazy">
+                        <img src="./assets/equipment/scissor-lift.png" 
+                             alt="تأجير منصات رفع مقصية في السعودية - معدات وصول آمنة" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Scissor Lifts" data-ar="رافعات مقصية">Scissor Lifts</h3>
-                    <p class="card-description" data-en="Reliable aerial work platforms for safe elevated access" data-ar="منصات عمل جوية موثوقة للوصول الآمن المرتفع">Reliable aerial work platforms for safe elevated access</p>
+                    <h3 class="card-title" data-en="Scissor Lifts" data-ar="منصات رفع مقصية">منصات رفع مقصية للايجار</h3>
+                    <p class="card-description" data-en="Reliable aerial work platforms for safe elevated access" data-ar="منصات عمل جوية موثوقة للوصول الآمن المرتفع">منصات عمل جوية موثوقة للوصول الآمن إلى المرتفعات المتوسطة</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Max Height" data-ar="الارتفاع الأقصى">Max Height</span>
-                            <span class="spec-value">Up to 10m</span>
+                            <span class="spec-label" data-en="Max Height" data-ar="الارتفاع الأقصى">الارتفاع الأقصى</span>
+                            <span class="spec-value">حتى 18 متر</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Platform Capacity" data-ar="سعة المنصة">Platform Capacity</span>
-                            <span class="spec-value">300-500 kg</span>
+                            <span class="spec-label" data-en="Platform Capacity" data-ar="سعة المنصة">سعة المنصة</span>
+                            <span class="spec-value">300-500 كجم</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Power Type" data-ar="نوع الطاقة">Power Type</span>
-                            <span class="spec-value">Electric/Battery</span>
+                            <span class="spec-label" data-en="Power Type" data-ar="نوع الطاقة">نوع الطاقة</span>
+                            <span class="spec-value">كهرباء/بطارية</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="2" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="2" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
-                
+
                 <!-- Man Lifts -->
                 <div class="equipment-card" data-equipment-id="6">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/Manlift.png" alt="Man Lift" loading="lazy">
+                        <img src="./assets/equipment/ManLift.png" 
+                             alt="تأجير رافعات أشخاص في السعودية - رفع آمن للعمال" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Man Lifts" data-ar="رافعات الأشخاص">Man Lifts</h3>
-                    <p class="card-description" data-en="Safe personnel elevation for high-altitude work" data-ar="رفع آمن للموظفين للعمل على ارتفاعات عالية">Safe personnel elevation for high-altitude work</p>
+                    <h3 class="card-title" data-en="Man Lifts" data-ar="رافعات أشخاص">رافعات أشخاص للايجار</h3>
+                    <p class="card-description" data-en="Safe personnel elevation for high-altitude work" data-ar="رفع آمن للأشخاص لأعمال المرتفعات">رفع آمن للعمال والفنيين لأعمال الصيانة على المرتفعات</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Max Height" data-ar="الارتفاع الأقصى">Max Height</span>
-                            <span class="spec-value">Up to 12m</span>
+                            <span class="spec-label" data-en="Max Height" data-ar="الارتفاع الأقصى">الارتفاع الأقصى</span>
+                            <span class="spec-value">حتى 43 متر</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Platform Size" data-ar="حجم المنصة">Platform Size</span>
-                            <span class="spec-value">2x1.5 m</span>
+                            <span class="spec-label" data-en="Platform Size" data-ar="حجم المنصة">حجم المنصة</span>
+                            <span class="spec-value">2x1.5 م</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Working Load" data-ar="حمولة العمل">Working Load</span>
-                            <span class="spec-value">250 kg</span>
+                            <span class="spec-label" data-en="Working Load" data-ar="الحمولة العاملة">الحمولة العاملة</span>
+                            <span class="spec-value">250 كجم</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="6" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="6" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
-                
+
                 <!-- Boom Lifts -->
                 <div class="equipment-card" data-equipment-id="9">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/Boomlift.png" alt="Boom Lift" loading="lazy">
+                        <img src="./assets/equipment/BoomLift.png" 
+                             alt="تأجير رافعات ذراعية في السعودية - الوصول للأماكن الصعبة" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Boom Lifts" data-ar="رافعات ذراعية">Boom Lifts</h3>
-                    <p class="card-description" data-en="Articulated and telescopic boom lifts for high access" data-ar="رافعات ذراعية مفصلية وتلسكوبية للوصول المرتفع">Articulated and telescopic boom lifts for high access</p>
+                    <h3 class="card-title" data-en="Boom Lifts" data-ar="رافعات ذراعية">رافعات ذراعية للايجار</h3>
+                    <p class="card-description" data-en="Articulated and telescopic boom lifts for high access" data-ar="رافعات ذراعية مفصلية وتلسكوبية للوصول العالي">رافعات ذراعية مفصلية وتلسكوبية للوصول إلى الأماكن المرتفعة والصعبة</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Max Height" data-ar="الارتفاع الأقصى">Max Height</span>
-                            <span class="spec-value">Up to 53m</span>
+                            <span class="spec-label" data-en="Max Height" data-ar="الارتفاع الأقصى">الارتفاع الأقصى</span>
+                            <span class="spec-value">حتى 53 متر</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Horizontal Reach" data-ar="الوصول الأفقي">Horizontal Reach</span>
-                            <span class="spec-value">Up to 24m</span>
+                            <span class="spec-label" data-en="Horizontal Reach" data-ar="المدى الأفقي">المدى الأفقي</span>
+                            <span class="spec-value">حتى 24 متر</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Platform Capacity" data-ar="سعة المنصة">Platform Capacity</span>
-                            <span class="spec-value">250-300 kg</span>
+                            <span class="spec-label" data-en="Platform Capacity" data-ar="سعة المنصة">سعة المنصة</span>
+                            <span class="spec-value">250-300 كجم</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="9" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="9" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Why Choose Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 class="section-title" data-en="Why Choose Our Access Equipment?" data-ar="لماذا تختار معدات الوصول لدينا؟">Why Choose Our Access Equipment?</h2>
+            <h2 class="section-title" data-en="Why Choose Our Access Equipment?" data-ar="لماذا تختار معدات الوصول لدينا؟">لماذا تختار معدات الوصول والارتفاع من رفع العالمية؟</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Safety First" data-ar="السلامة أولاً">Safety First</h3>
-                    <p data-en="All equipment meets international safety standards" data-ar="جميع المعدات تفي بمعايير السلامة الدولية">All equipment meets international safety standards</p>
+                    <h3 data-en="Safety First" data-ar="السلامة أولاً">السلامة أولاً</h3>
+                    <p data-en="All equipment meets international safety standards" data-ar="جميع المعدات تفي بمعايير السلامة الدولية">جميع معداتنا مطابقة لأعلى معايير السلامة العالمية</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Regular Maintenance" data-ar="صيانة منتظمة">Regular Maintenance</h3>
-                    <p data-en="Inspected and serviced before each rental" data-ar="يتم فحصها وخدمتها قبل كل استئجار">Inspected and serviced before each rental</p>
+                    <h3 data-en="Regular Maintenance" data-ar="صيانة دورية">صيانة دورية</h3>
+                    <p data-en="Inspected and serviced before each rental" data-ar="يتم فحصها وخدمتها قبل كل تأجير">فحص وخدمة المعدات قبل وبعد كل عملية تأجير</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Operator Training" data-ar="تدريب المشغلين">Operator Training</h3>
-                    <p data-en="Certified operators available upon request" data-ar="مشغلون معتمدون متاحون عند الطلب">Certified operators available upon request</p>
+                    <h3 data-en="Operator Training" data-ar="تدريب المشغلين">تدريب المشغلين</h3>
+                    <p data-en="Certified operators available upon request" data-ar="مشغلون معتمدون متاحون عند الطلب">مشغلون معتمدون متاحون عند الطلب لتشغيل المعدات</p>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Quick Delivery" data-ar="توصيل سريع">Quick Delivery</h3>
-                    <p data-en="Fast setup and ready to work" data-ar="إعداد سريع وجاهز للعمل">Fast setup and ready to work</p>
+                    <h3 data-en="Quick Delivery" data-ar="توصيل سريع">توصيل سريع</h3>
+                    <p data-en="Fast setup and ready to work" data-ar="إعداد سريع وجاهز للعمل">توصيل المعدات إلى موقع العمل وإعدادها للعمل بسرعة</p>
+                </div>
+            </div>
+            
+            <!-- Hidden FAQ for SEO -->
+            <div class="faq-section" style="display: none;">
+                <h3>الأسئلة الشائعة عن تأجير معدات الوصول</h3>
+                <div class="faq-item">
+                    <h4>ما هي فترات تأجير معدات الوصول المتاحة؟</h4>
+                    <p>نقدم فترات تأجير مرنة حسب احتياج العميل: يومي، أسبوعي، شهري، أو لفترة المشروع كاملة.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>هل تحتاج معدات الوصول إلى مشغل خاص؟</h4>
+                    <p>بعض المعدات تحتاج إلى مشغل معتمد، ويمكننا توفير مشغلين مدربين عند الطلب.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>ما هي إجراءات السلامة المتبعة؟</h4>
+                    <p>جميع المعدات مزودة بأنظمة سلامة متطورة وتخضع لفحص دوري قبل كل استخدام.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Rental Contact Modal -->
-    <div class="modal" id="rentalModal">
-        <div class="modal-content rental-modal">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-header">
-                <h2 data-en="Rent Equipment" data-ar="تأجير المعدات">Rent Equipment</h2>
-                <p id="rentalEquipmentName">Equipment Name</p>
-            </div>
-            <div class="modal-body">
-                <p class="rental-intro" data-en="Choose your preferred contact method:" data-ar="اختر طريقة الاتصال المفضلة لديك">Choose your preferred contact method:</p>
-                <div class="rental-buttons">
-                    <a href="https://wa.me/966534672153" class="rental-btn whatsapp-main" target="_blank" rel="noopener noreferrer">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
-                        </svg>
-                        <div>
-                            <div class="btn-title" data-en="Chat on WhatsApp" data-ar="تحدث على واتساب">Chat on WhatsApp</div>
-                            <div class="btn-subtitle">+966 53 467 2153</div>
-                        </div>
-                    </a>
-                    
-                    <a href="mailto:globalrafe@gmail.com" class="rental-btn email-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <div>
-                            <div class="btn-title" data-en="Send Email" data-ar="إرسال بريد إلكتروني">Send Email</div>
-                            <div class="btn-subtitle" data-en="Detailed Quote" data-ar="عرض سعر مفصل">Detailed Quote</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p data-en="© 2024 Rafe Global Equipment. All rights reserved." data-ar="© 2024 رفع العالمية للمعدات. جميع الحقوق محفوظة.">© 2024 Rafe Global Equipment. All rights reserved.</p>
+                <p data-en="© 2025 Rafe Global Equipment. All rights reserved." 
+                   data-ar="© 2025 رفع العالمية للمعدات. جميع الحقوق محفوظة.">
+                   © 2025 رفع العالمية للمعدات. جميع الحقوق محفوظة.
+                </p>
             </div>
         </div>
     </footer>
-    
-    <!-- Menu Overlay -->
-    <div class="menu-overlay"></div>
-    
-    <script src="./js/script.js?v=2.1"></script>
+
+    <script src="./js/script.js?v=2.2"></script>
 </body>
 </html>

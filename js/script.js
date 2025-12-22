@@ -1,35 +1,34 @@
-// ============================================
-// Rafe Global Equipment - COMPLETE FIXED SCRIPT
-// ============================================
+// ---
+// RAFE GLOBAL EQUIPMENT - COMPLETE FIXED SCRIPT
+//
+console.log("Initializing Rafe Global Equipment Website...");
 
-console.log("🚀 Initializing Rafe Global Equipment Website...");
-
-// ============================================
+// ---
 // 1. GLOBAL STATE
-// ============================================
-let currentLanguage = 'en';
+//
+let currentLanguage = 'ar'; // Default to Arabic
 let isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 let lastClickTime = 0;
 
 const equipmentDatabase = {
-    1: { name: { en: "Bobcat Loaders", ar: "محملات بوبكات" }, category: "heavy" },
-    2: { name: { en: "Scissor Lifts", ar: "رافعات مقصية" }, category: "access" },
-    3: { name: { en: "Mobile Cranes", ar: "رافعات متنقلة" }, category: "heavy" },
+    1: { name: { en: "Bobcat Loaders", ar: "بوبكات لودر" }, category: "heavy" },
+    2: { name: { en: "Scissor Lifts", ar: "منصات رفع مقصية" }, category: "access" },
+    3: { name: { en: "Mobile Cranes", ar: "كرينات متنقلة" }, category: "heavy" },
     4: { name: { en: "Forklifts", ar: "رافعات شوكية" }, category: "material" },
     5: { name: { en: "Telescopic Forklifts", ar: "رافعات شوكية تلسكوبية" }, category: "material" },
-    6: { name: { en: "Man Lifts", ar: "رافعات الأشخاص" }, category: "access" },
-    7: { name: { en: "Light Towers", ar: "أبراج الإضاءة" }, category: "lighting" },
+    6: { name: { en: "Man Lifts", ar: "رافعات أشخاص" }, category: "access" },
+    7: { name: { en: "Light Towers", ar: "أبراج إضاءة" }, category: "lighting" },
     8: { name: { en: "Industrial Forklifts", ar: "رافعات شوكية صناعية" }, category: "heavy" },
     9: { name: { en: "Boom Lifts", ar: "رافعات ذراعية" }, category: "access" },
     10: { name: { en: "Backhoe Loader (JCB)", ar: "حفار خلفي (JCB)" }, category: "heavy" },
-    11: { name: { en: "Telehandler", ar: "تليهاندلر" }, category: "heavy" }
+    11: { name: { en: "Telehandler", ar: "تيلي هاندلر" }, category: "heavy" }
 };
 
-// ============================================
+// ---
 // 2. INITIALIZATION
-// ============================================
+// ---
 function initializeApp() {
-    console.log("🚀 Starting application initialization...");
+    console.log("Starting application initialization...");
     
     try {
         // Setup all features
@@ -40,25 +39,22 @@ function initializeApp() {
         setupScrollAndNavigation();
         setupBackToTop();
         setupPageSpecificFeatures();
-        
-        // NEW: Add WhatsApp button setup
         setupWhatsAppButton();
         
         // Initialize with current language
         updatePageLanguage();
         
         console.log("✅ Application initialized successfully!");
-        
     } catch (error) {
         console.error("❌ Error during initialization:", error);
     }
 }
 
-// ============================================
-// 3. LANGUAGE SWITCHER - UPDATED
-// ============================================
+// ---
+// 3. LANGUAGE SWITCHER - FIXED
+// ---
 function setupLanguageSwitcher() {
-    console.log("🌐 Setting up language switcher...");
+    console.log("🔧 Setting up language switcher...");
     
     const langButtons = document.querySelectorAll('.lang-btn');
     
@@ -82,47 +78,10 @@ function setupLanguageSwitcher() {
         // Update all translatable elements
         updatePageLanguage();
         
-        // NEW: Update WhatsApp button text
+        // Update WhatsApp button text
         updateWhatsAppButtonText();
         
         console.log(`✅ Language changed to: ${lang}`);
-    }
-    
-    // Update all translatable elements on page
-    function updatePageLanguage() {
-        document.querySelectorAll('[data-en], [data-ar]').forEach(element => {
-            if (element.hasAttribute('data-en') && element.hasAttribute('data-ar')) {
-                const text = currentLanguage === 'ar' ? 
-                    element.getAttribute('data-ar') : 
-                    element.getAttribute('data-en');
-                
-                if (text && text.trim() !== '') {
-                    const tagName = element.tagName;
-                    
-                    if (tagName === 'INPUT' || tagName === 'TEXTAREA') {
-                        element.placeholder = text;
-                    } else if (tagName === 'IMG') {
-                        element.alt = text;
-                    } else if (element.classList.contains('btn-title') || 
-                               element.classList.contains('btn-subtitle') ||
-                               element.classList.contains('spec-label') ||
-                               element.classList.contains('logo-text') ||
-                               element.classList.contains('logo-subtitle')) {
-                        element.textContent = text;
-                    } else if (element.children.length === 0) {
-                        element.textContent = text;
-                    } else {
-                        // Check for nested translatable elements
-                        const hasNestedTranslatable = Array.from(element.children).some(child => 
-                            child.hasAttribute('data-en') || child.hasAttribute('data-ar')
-                        );
-                        if (!hasNestedTranslatable) {
-                            element.textContent = text;
-                        }
-                    }
-                }
-            }
-        });
     }
     
     // Setup click handlers
@@ -146,15 +105,48 @@ function setupLanguageSwitcher() {
     } else {
         setLanguage('en');
     }
-    
-    console.log("✅ Language switcher setup complete");
 }
 
-// ============================================
-// 4. MOBILE MENU - COMPLETE FIX
-// ============================================
+// Update all translatable elements on page
+function updatePageLanguage() {
+    document.querySelectorAll('[data-en], [data-ar]').forEach(element => {
+        if (element.hasAttribute('data-en') && element.hasAttribute('data-ar')) {
+            const text = currentLanguage === 'ar' ? 
+                element.getAttribute('data-ar') : 
+                element.getAttribute('data-en');
+            
+            if (text && text.trim() !== '') {
+                const tagName = element.tagName;
+                
+                if (tagName === 'INPUT' || tagName === 'TEXTAREA') {
+                    element.placeholder = text;
+                } else if (tagName === 'IMG') {
+                    element.alt = text;
+                } else if (element.classList.contains('btn-title') || 
+                           element.classList.contains('btn-subtitle') || 
+                           element.classList.contains('spec-label')) {
+                    element.textContent = text;
+                } else if (element.children.length === 0) {
+                    element.textContent = text;
+                } else {
+                    // Check for nested translatable elements
+                    const hasNestedTranslatable = Array.from(element.children).some(child => 
+                        child.hasAttribute('data-en') || child.hasAttribute('data-ar')
+                    );
+                    if (!hasNestedTranslatable) {
+                        element.textContent = text;
+                    }
+                }
+            }
+        }
+    });
+}
+
+// ---
+// 4. MOBILE MENU - FIXED
+// ---
 function setupMobileMenu() {
-    console.log("📱 Setting up mobile menu...");
+    console.log("🔧 Setting up mobile menu...");
     
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
@@ -168,12 +160,10 @@ function setupMobileMenu() {
     // Toggle menu function
     function toggleMenu() {
         const isOpening = !navMenu.classList.contains('active');
-        
         navMenu.classList.toggle('active');
         menuToggle.classList.toggle('active');
         menuToggle.setAttribute('aria-expanded', isOpening);
         
-        // Toggle body classes for menu state
         if (isOpening) {
             document.body.classList.add('menu-open');
             document.body.style.overflow = 'hidden';
@@ -181,8 +171,6 @@ function setupMobileMenu() {
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
         }
-        
-        console.log(`Menu ${isOpening ? 'opened' : 'closed'}`);
     }
     
     // Close menu function
@@ -204,24 +192,8 @@ function setupMobileMenu() {
     // Close menu when clicking on nav links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Check if it's a hash link (same page navigation)
-            const href = this.getAttribute('href');
-            
             if (navMenu.classList.contains('active')) {
-                // Close menu first
                 closeMenu();
-                
-                // If it's a hash link on index page, scroll to section after menu closes
-                if (href && href.includes('#') && window.location.pathname.includes('index')) {
-                    e.preventDefault();
-                    const targetId = href.split('#')[1];
-                    setTimeout(() => {
-                        const targetElement = document.getElementById(targetId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }, 300);
-                }
             }
         });
     });
@@ -229,7 +201,7 @@ function setupMobileMenu() {
     // Close menu when clicking outside on mobile
     document.addEventListener('click', function(e) {
         if (navMenu.classList.contains('active') && 
-            window.innerWidth <= 992 && 
+            window.innerWidth <= 992 &&
             !navMenu.contains(e.target) && 
             !menuToggle.contains(e.target)) {
             closeMenu();
@@ -243,19 +215,17 @@ function setupMobileMenu() {
         }
     });
     
-    // Close menu on window resize (if resizing to desktop)
+    // Close menu on window resize
     window.addEventListener('resize', function() {
         if (window.innerWidth > 992 && navMenu.classList.contains('active')) {
             closeMenu();
         }
     });
-    
-    console.log("✅ Mobile menu setup complete");
 }
 
-// ============================================
-// 5. RENTAL BUTTONS - IMPROVED
-// ============================================
+// ---
+// 5. RENTAL BUTTONS - CRITICAL FIX
+// ---
 function setupRentalButtons() {
     console.log("🔧 Setting up rental buttons...");
     
@@ -268,19 +238,20 @@ function setupRentalButtons() {
         while (rentButton && rentButton !== document) {
             if (rentButton.classList && 
                 (rentButton.classList.contains('rent-now') || 
-                 (rentButton.classList.contains('card-button') && rentButton.getAttribute('data-equipment-id')))) {
+                 (rentButton.classList.contains('card-button') && 
+                  rentButton.hasAttribute('data-equipment-id')))) {
                 break;
             }
             rentButton = rentButton.parentElement;
         }
         
         // If we found a rent button
-        if (rentButton && rentButton !== document) {
+        if (rentButton && rentButton !== document && rentButton.classList.contains('rent-now')) {
             e.preventDefault();
             e.stopPropagation();
             
             const equipmentId = rentButton.getAttribute('data-equipment-id');
-            console.log(`🎯 Rent button clicked: ${equipmentId}`);
+            console.log(`🛠️ Rent button clicked: ${equipmentId}`);
             
             if (!equipmentId) {
                 console.error("❌ No equipment ID found on button:", rentButton);
@@ -290,9 +261,9 @@ function setupRentalButtons() {
                 return;
             }
             
+            // Debounce click
             const now = Date.now();
-            if (now - lastClickTime < 300) return; // Debounce
-            
+            if (now - lastClickTime < 300) return;
             lastClickTime = now;
             
             // Visual feedback
@@ -304,6 +275,7 @@ function setupRentalButtons() {
                 rentButton.style.transform = originalTransform;
             }, 200);
             
+            // Open modal
             openRentalModal(equipmentId);
         }
     });
@@ -311,27 +283,29 @@ function setupRentalButtons() {
     console.log("✅ Rental buttons setup complete");
 }
 
-// ============================================
+// ---
 // 6. RENTAL MODAL - FIXED
-// ============================================
+// ---
 function setupRentalModal() {
-    console.log("💰 Setting up rental modal...");
+    console.log("🔧 Setting up rental modal...");
     
     const modal = document.getElementById('rentalModal');
     const closeButtons = document.querySelectorAll('.modal-close');
     
     if (!modal) {
-        console.error("❌ Rental modal not found!");
+        console.log("ℹ️ Rental modal not found on this page - continuing without modal");
         return;
     }
     
-    // Open modal function
+    // Open modal function - NOW GLOBAL
     window.openRentalModal = function(equipmentId) {
+        console.log(`🛠️ Opening modal for equipment ID: ${equipmentId}`);
+        
         const equipment = equipmentDatabase[equipmentId];
         if (!equipment) {
             console.error(`❌ Equipment ID ${equipmentId} not found`);
             alert(currentLanguage === 'ar' ? 
-                "لم يتم العثور على المعدات. يرجى المحاولة مرة أخرى." : 
+                "لم يتم العثور على المعدات. يرجى المحاولة مرة أخرى" : 
                 "Equipment not found. Please try again.");
             return;
         }
@@ -350,10 +324,10 @@ function setupRentalModal() {
         const whatsappBtn = modal.querySelector('.whatsapp-main');
         if (whatsappBtn) {
             const message = currentLanguage === 'ar' ? 
-                `مرحباً رفع العالمية، أنا مهتم بتأجير: ${equipmentName} (رقم المعدة: ${equipmentId})` :
+                `مرحبًا رفع العالمية، أنا مهتم بتأجير: ${equipmentName} (رقم المعدة: ${equipmentId})` : 
                 `Hello Rafe Global, I'm interested in renting: ${equipmentName} (Equipment ID: ${equipmentId})`;
             
-            const phone = whatsappBtn.href.includes('502345678') ? '966534672153' : '966534672153';
+            const phone = '966534672153';
             whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         }
         
@@ -361,14 +335,14 @@ function setupRentalModal() {
         const emailBtn = modal.querySelector('.email-btn');
         if (emailBtn) {
             const subject = currentLanguage === 'ar' ? 
-                `استفسار تأجير: ${equipmentName}` :
+                `استفسار تأجير: ${equipmentName}` : 
                 `Rental Inquiry: ${equipmentName}`;
             
-            const body = currentLanguage === 'ar' ?
-                `أنا مهتم بتأجير ${equipmentName} (رقم المعدة: ${equipmentId}). يرجى إرسال المزيد من المعلومات لي.\n\nمعلومات المشروع:\n- الموقع:\n- المدة:\n- أي متطلبات خاصة:` :
+            const body = currentLanguage === 'ar' ? 
+                `أنا مهتم بتأجير ${equipmentName} (رقم المعدة: ${equipmentId}). يرجى إرسال المزيد من المعلومات.\n\nتفاصيل المشروع:\n- الموقع:\n- المدة:\n- المتطلبات الخاصة:` : 
                 `I'm interested in renting ${equipmentName} (Equipment ID: ${equipmentId}). Please send me more information.\n\nProject Details:\n- Location:\n- Duration:\n- Special Requirements:`;
             
-            emailBtn.href = `mailto:${emailBtn.href.includes('contact@') ? 'contact@rafeglobal.com' : 'info@rafeglobal.com'}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            emailBtn.href = `mailto:globalrafe@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         }
         
         // Show modal with animation
@@ -379,21 +353,21 @@ function setupRentalModal() {
         console.log(`✅ Modal opened for: ${equipmentName}`);
     };
     
-    // Close modal function
+    // Close modal function - NOW GLOBAL
     window.closeModal = function() {
-        const modal = document.getElementById('rentalModal');
         if (modal) {
             modal.classList.remove('active');
             document.body.classList.remove('modal-open');
             document.body.style.overflow = '';
-            
-            // Remove focus trap
-            const activeElement = document.activeElement;
-            if (activeElement && modal.contains(activeElement)) {
-                activeElement.blur();
-            }
         }
-        console.log("🔒 Modal closed");
+        
+        // Remove focus trap
+        const activeElement = document.activeElement;
+        if (activeElement && modal.contains(activeElement)) {
+            activeElement.blur();
+        }
+        
+        console.log("✅ Modal closed");
     };
     
     // Setup close buttons
@@ -422,11 +396,11 @@ function setupRentalModal() {
     console.log("✅ Rental modal setup complete");
 }
 
-// ============================================
+// ---
 // 7. SCROLL & NAVIGATION
-// ============================================
+// ---
 function setupScrollAndNavigation() {
-    console.log("🔗 Setting up scroll and navigation...");
+    console.log("🔧 Setting up scroll and navigation...");
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -473,25 +447,24 @@ function setupScrollAndNavigation() {
     if (exploreBtn && equipmentSection) {
         exploreBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            equipmentSection.scrollIntoView({ 
+            equipmentSection.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
         });
     }
     
-    // View Details buttons - make sure they work
+    // View Details buttons
     document.querySelectorAll('.view-details').forEach(button => {
         button.addEventListener('click', function(e) {
             const onclick = this.getAttribute('onclick');
             if (onclick && onclick.includes('window.location.href')) {
-                const match = onclick.match(/window\.location\.href=['"]([^'"]+)['"]/);
+                const match = onclick.match(/window\.location\.href=['"]([^"']+)['"]/);
                 if (match && match[1]) {
                     e.preventDefault();
                     // Add loading state
                     this.classList.add('loading');
                     this.disabled = true;
-                    
                     setTimeout(() => {
                         window.location.href = match[1];
                     }, 100);
@@ -508,15 +481,21 @@ function setupScrollAndNavigation() {
     console.log("✅ Scroll and navigation setup complete");
 }
 
-// ============================================
+// ---
 // 8. BACK TO TOP
-// ============================================
+// ---
 function setupBackToTop() {
     const backToTop = document.createElement('button');
     backToTop.className = 'back-to-top';
     backToTop.innerHTML = '↑';
-    backToTop.setAttribute('aria-label', 'Back to top');
+    backToTop.setAttribute('aria-label', currentLanguage === 'ar' ? 'العودة للأعلى' : 'Back to top');
     document.body.appendChild(backToTop);
+    
+    // RTL positioning
+    if (document.documentElement.dir === 'rtl') {
+        backToTop.style.right = 'auto';
+        backToTop.style.left = '30px';
+    }
     
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -531,9 +510,9 @@ function setupBackToTop() {
     });
 }
 
-// ============================================
+// ---
 // 9. PAGE SPECIFIC FEATURES
-// ============================================
+// ---
 function setupPageSpecificFeatures() {
     const currentPage = window.location.pathname.split('/').pop();
     
@@ -549,44 +528,43 @@ function setupPageSpecificFeatures() {
     }
 }
 
-// ============================================
-// 10. WHATSAPP FLOATING BUTTON - NEW
-// ============================================
+// ---
+// 10. WHATSAPP FLOATING BUTTON
+// ---
 function setupWhatsAppButton() {
-    console.log("💬 Setting up WhatsApp floating button...");
+    console.log("🔧 Setting up WhatsApp floating button...");
     
     // Create WhatsApp button if it doesn't exist
     if (!document.querySelector('.whatsapp-container')) {
         const whatsappHTML = `
-            <div class="whatsapp-container">
-                <a href="https://wa.me/+966534672153" 
-                   class="whatsapp-float" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   aria-label="WhatsApp">
-                    <div class="whatsapp-icon-wrapper">
-                        <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.032,12.366c-0.344,0.196-0.693,0.406-0.693,0.815c0,0.406,0.554,0.815,0.901,1.08 c0.348,0.266,0.826,0.406,1.297,0.406c0.48,0,0.934-0.154,1.297-0.406c0.365-0.25,0.901-0.683,0.901-1.08 c0-0.409-0.357-0.619-0.693-0.815c-0.339-0.196-0.826-0.406-1.505-0.406C12.858,11.96,12.371,12.17,12.032,12.366z M17.606,6.384 c-2.199-2.199-5.297-3.231-8.28-2.704C6.242,4.161,4.264,5.664,3.054,7.734C1.845,9.804,1.5,12.246,2.083,14.5 c0.009,0.035,0.021,0.069,0.035,0.102l-1.399,5.114l5.151-1.366c0.035,0.015,0.071,0.027,0.107,0.037 c2.258,0.583,4.704,0.238,6.774-0.971c2.07-1.21,3.573-3.188,4.054-5.272C20.837,11.681,19.805,8.583,17.606,6.384z M16.656,15.358 c-1.836,1.074-4.006,1.441-6.083,1.04l-0.108-0.024l-0.104,0.027l-3.746,0.992l0.998-3.647l0.026-0.095l-0.022-0.102 c-0.402-2.077-0.034-4.247,1.04-6.083c1.074-1.836,2.876-2.964,4.844-3.118c1.967-0.154,3.914,0.564,5.277,1.927 c1.363,1.363,2.081,3.31,1.927,5.277C19.619,12.482,18.492,14.284,16.656,15.358z"/>
-                        </svg>
-                        <div class="whatsapp-pulse"></div>
-                    </div>
-                    <div class="whatsapp-tooltip">
-                        <span data-en="Chat with us on WhatsApp" data-ar="تحدث معنا عبر واتساب">Chat with us on WhatsApp</span>
-                        <span class="whatsapp-number">+966 53 467 2153</span>
-                    </div>
-                </a>
-            </div>
+        <div class="whatsapp-container">
+            <a href="https://wa.me/+966534672153"
+               class="whatsapp-float"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp"
+               title="${currentLanguage === 'ar' ? 'تواصل معنا على واتساب' : 'Chat with us on WhatsApp'}">
+                <div class="whatsapp-icon-wrapper">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.032,12.366c-0.344,0.196-0.693,0.406-0.693,0.815c0,0.406,0.554,0.815,0.901,1.08c0.348,0.266,0.826,0.406,1.297,0.406c0.48,0,0.934-0.154,1.297-0.406c0.365-0.25,0.901-0.683,0.901-1.08c0-0.409-0.357-0.619-0.693-0.815c-0.339-0.196-0.826-0.406-1.505-0.406c12.858,11.96,12.371,12.17,12.032,12.366z M17.606,6.384c-2.199-2.199-5.297-3.231-8.28-2.704c6.242,4.161,4.264,5.664,3.054,7.734c1.845,9.804,1.5,12.246,2.083,14.5c0.009,0.035,0.021,0.069,0.035,0.1021-1.399,5.11415.151-1.366c0.035,0.015,0.071,0.027,0.107,0.037c2.258,0.583,4.704,0.238,6.774-0.971c2.07-1.21,3.573-3.188,4.054-5.272c20.337,11.681,19.805,8.583,17.606,6.384z M16.656,15.358c-1.836,1.074-4.006,1.441-6.083,1.041-0.108-0.0241-0.104,0.0271-3.746,0.99210.998-3.64710.026-0.0951-0.022-0.102c-0.402-2.077-0.034-4.247,1.04-6.083c1.074-1.836,2.876-2.964,4.844-3.118c1.967-0.154,3.914,0.564,5.277,1.927c1.363,1.363,2.081,3.31,1.927,5.277C19.619,12.482,18.492,14.284,16.656,15.358z"/>
+                    </svg>
+                    <div class="whatsapp-pulse"></div>
+                </div>
+                <div class="whatsapp-tooltip">
+                    <span data-en="Chat with us on WhatsApp" data-ar="تواصل معنا على واتساب">${currentLanguage === 'ar' ? 'تواصل معنا على واتساب' : 'Chat with us on WhatsApp'}</span>
+                    <span class="whatsapp-number">+966 53 467 2153</span>
+                </div>
+            </a>
+        </div>
         `;
         
         document.body.insertAdjacentHTML('beforeend', whatsappHTML);
-        console.log("✅ WhatsApp button created");
     }
     
     // Add click animation
     const whatsappBtn = document.querySelector('.whatsapp-float');
     if (whatsappBtn) {
         whatsappBtn.addEventListener('click', function(e) {
-            // Add click feedback animation
             const iconWrapper = this.querySelector('.whatsapp-icon-wrapper');
             if (iconWrapper) {
                 iconWrapper.style.transform = 'scale(0.95)';
@@ -594,18 +572,16 @@ function setupWhatsAppButton() {
                     iconWrapper.style.transform = '';
                 }, 150);
             }
-            
-            // Log click for analytics
-            console.log("💬 WhatsApp button clicked");
+            console.log("📱 WhatsApp button clicked");
         });
     }
     
     console.log("✅ WhatsApp floating button setup complete");
 }
 
-// ============================================
-// 11. WHATSAPP BUTTON TEXT UPDATER - NEW
-// ============================================
+// ---
+// 11. WHATSAPP BUTTON TEXT UPDATER
+// ---
 function updateWhatsAppButtonText() {
     const tooltip = document.querySelector('.whatsapp-tooltip span');
     if (tooltip && tooltip.hasAttribute('data-en') && tooltip.hasAttribute('data-ar')) {
@@ -614,21 +590,27 @@ function updateWhatsAppButtonText() {
             tooltip.getAttribute('data-en');
         if (text) tooltip.textContent = text;
     }
+    
+    // Update WhatsApp float title
+    const whatsappFloat = document.querySelector('.whatsapp-float');
+    if (whatsappFloat) {
+        whatsappFloat.title = currentLanguage === 'ar' ? 
+            'تواصل معنا على واتساب' : 
+            'Chat with us on WhatsApp';
+    }
 }
 
-// ============================================
+// ---
 // 12. HELPER FUNCTIONS
-// ============================================
+// ---
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
     let current = '';
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
-        
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
@@ -655,13 +637,144 @@ function debounce(func, wait) {
     };
 }
 
-// ============================================
-// 13. START THE APPLICATION
-// ============================================
+// ---
+// 13. ERROR HANDLING FOR IMAGES
+// ---
+function setupImageErrorHandling() {
+    // Handle broken images
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function() {
+            console.error(`❌ Image failed to load: ${this.src}`);
+            this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%23f3f4f6"/%3E%3Ctext x="200" y="150" text-anchor="middle" font-family="Arial" font-size="16" fill="%236b7280"%3EImage not available%3C/text%3E%3C/svg%3E';
+            this.alt = currentLanguage === 'ar' ? 'الصورة غير متوفرة' : 'Image not available';
+        });
+    });
+}
+
+// ---
+// 14. SEO FUNCTIONS
+// ---
+function initializeSEO() {
+    console.log("🔧 Initializing SEO features...");
+    
+    // Set Arabic as default language for SEO
+    if (!localStorage.getItem('rafe_language')) {
+        localStorage.setItem('rafe_language', 'ar');
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+    }
+    
+    // Add structured data dynamically
+    addDynamicStructuredData();
+    
+    // Handle language for search engines
+    handleSearchEngineLanguage();
+    
+    // Track SEO events
+    trackSEOEvents();
+    
+    // Setup image error handling
+    setupImageErrorHandling();
+}
+
+function addDynamicStructuredData() {
+    // Add FAQ schema if exists
+    const faqElements = document.querySelectorAll('.faq-item');
+    if (faqElements.length > 0) {
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": []
+        };
+        
+        faqElements.forEach((faq, index) => {
+            const question = faq.querySelector('h4')?.textContent || '';
+            const answer = faq.querySelector('p')?.textContent || '';
+            
+            if (question && answer) {
+                faqSchema.mainEntity.push({
+                    "@type": "Question",
+                    "name": question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": answer
+                    }
+                });
+            }
+        });
+        
+        if (faqSchema.mainEntity.length > 0) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.textContent = JSON.stringify(faqSchema);
+            document.head.appendChild(script);
+        }
+    }
+}
+
+function handleSearchEngineLanguage() {
+    const currentLang = localStorage.getItem('rafe_language') || 'ar';
+    
+    // Update canonical URL with language parameter for search engines
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+        const url = new URL(canonical.href);
+        url.searchParams.set('lang', currentLang);
+        canonical.href = url.toString();
+    }
+}
+
+function trackSEOEvents() {
+    // Track equipment views
+    document.addEventListener('click', function(e) {
+        const equipmentCard = e.target.closest('.equipment-card');
+        if (equipmentCard) {
+            const equipmentId = equipmentCard.getAttribute('data-equipment-id');
+            const equipmentName = equipmentCard.querySelector('.card-title')?.textContent || '';
+            
+            console.log('📊 SEO Event: Equipment viewed', {
+                id: equipmentId,
+                name: equipmentName,
+                url: window.location.href
+            });
+        }
+    });
+}
+
+// ---
+// 15. ENHANCED RENT BUTTON FIX
+// ---
+function enhanceRentButtons() {
+    console.log("🔧 Enhancing rent buttons...");
+    
+    // Direct event listeners for rent buttons (fallback)
+    document.querySelectorAll('.rent-now').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const equipmentId = this.getAttribute('data-equipment-id');
+            if (equipmentId) {
+                console.log(`🛠️ Direct rent button click: ${equipmentId}`);
+                openRentalModal(equipmentId);
+            }
+        });
+    });
+}
+
+// ---
+// 16. START THE APPLICATION
+// ---
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeApp);
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeApp();
+        initializeSEO();
+        enhanceRentButtons(); // Additional fix for rent buttons
+    });
 } else {
     initializeApp();
+    initializeSEO();
+    enhanceRentButtons(); // Additional fix for rent buttons
 }
 
 console.log("✅ All scripts loaded successfully!");

@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /?lang=en
+Disallow: /index.php
+
+Crawl-delay: 2
+
+Sitemap: https://rafeglobal.com/sitemap.xml
+
+# Arabic content priority
+User-agent: Googlebot
+Allow: /
+Allow: /?lang=ar
+Allow: /*.html?lang=ar
+Disallow: /?lang=en
+
+User-agent: Bingbot
+Allow: /
+Allow: /?lang=ar
+Allow: /*.html?lang=ar
+
+User-agent: Yandex
+Allow: /
+Allow: /?lang=ar
+
+User-agent: Baiduspider
+Allow: /
+Allow: /?lang=ar

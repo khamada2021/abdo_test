@@ -1,50 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="رفع العالمية - Leading equipment rental provider in Saudi Arabia. Premium construction machinery, competitive pricing, and professional service.">
-    <meta name="keywords" content="equipment rental, construction machinery, cranes, forklifts, lifts, heavy equipment, Saudi Arabia, Riyadh">
-    <meta name="author" content="Rafe Global Equipment">
-    <meta name="theme-color" content="#fbbf24">
-    <meta property="og:title" content="رفع العالمية - Premium Equipment Rental">
-    <meta property="og:description" content="Leading equipment rental provider with premium machinery and professional service">
+    
+    <!-- Primary Meta Tags (Arabic First) -->
+    <meta name="description" content="رفع العالمية - الشركة الرائدة في تأجير المعدات الثقيلة في السعودية. تأجير معدات بناء، رافعات، كرينات، معدات وصول، إضاءة. أسعار تنافسية وخدمة 24/7.">
+    <meta name="keywords" content="تأجير معدات ثقيلة, تأجير معدات بناء, كرينات للايجار, رافعات شوكية, معدات وصول, إضاءة مواقع, تأجير في الرياض, معدات السعودية, شركة تأجير معدات, Rafe Global, equipment rental Saudi Arabia">
+    <meta name="author" content="Rafe Global Equipment - رفع العالمية للمعدات">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:type" content="website">
-    <title>رفع العالمية - Premium Equipment Rental | Rafe Global</title>
-    <link rel="stylesheet" href="./css/styles.css?v=2.0">
+    <meta property="og:url" content="https://rafeglobal.com/">
+    <meta property="og:title" content="رفع العالمية - تأجير المعدات الثقيلة في السعودية | معدات بناء | رافعات">
+    <meta property="og:description" content="الشركة الرائدة في تأجير المعدات الثقيلة في المملكة العربية السعودية. معدات عالية الجودة وخدمة مميزة.">
+    <meta property="og:image" content="https://rafeglobal.com/assets/rafe_global_logo_concept_3.png">
+    <meta property="og:image:alt" content="شركة رفع العالمية لتأجير المعدات الثقيلة في السعودية">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="رفع العالمية - تأجير المعدات الثقيلة في السعودية">
+    <meta name="twitter:description" content="تأجير معدات البناء الثقيلة في الرياض وجميع مناطق المملكة">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rafeglobal.com/">
+    
+    <!-- Alternate Language URLs -->
+    <link rel="alternate" hreflang="ar" href="https://rafeglobal.com/">
+    <link rel="alternate" hreflang="ar-SA" href="https://rafeglobal.com/">
+    <link rel="alternate" hreflang="en" href="https://rafeglobal.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://rafeglobal.com/">
+    
+    <meta name="theme-color" content="#fbbf24">
+    <title>رفع العالمية - تأجير المعدات الثقيلة في السعودية | معدات بناء | رافعات | كرينات</title>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "رفع العالمية لتأجير المعدات",
+      "alternateName": "Rafe Global Equipment Rental",
+      "url": "https://rafeglobal.com",
+      "logo": "https://rafeglobal.com/assets/rafe_global_logo_concept_3.png",
+      "description": "الشركة الرائدة في تأجير المعدات الثقيلة والبناء في المملكة العربية السعودية. تأجير كرينات، رافعات، معدات بناء، معدات وصول، إضاءة.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الرياض",
+        "addressRegion": "منطقة الرياض",
+        "addressCountry": "SA",
+        "postalCode": "12345",
+        "streetAddress": "الرياض، المملكة العربية السعودية"
+      },
+      "telephone": "+966534672153",
+      "email": "globalrafe@gmail.com",
+      "openingHours": "24/7",
+      "priceRange": "$$",
+      "currenciesAccepted": "SAR",
+      "paymentAccepted": "نقداً, تحويل بنكي",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Saudi Arabia"
+      },
+      "sameAs": [
+        "https://wa.me/+966534672153"
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "offerCount": "20",
+        "lowPrice": "500",
+        "highPrice": "10000",
+        "priceCurrency": "SAR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="./css/styles.css?v=2.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="./assets/hero-bg.mp4">
+    <link rel="preload" as="image" href="./assets/rafe_global_logo_concept_3.png">
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
     <!-- Language Switcher -->
     <div class="language-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn active" data-lang="ar" aria-label="العربية">AR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
     </div>
     
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="القائمة الرئيسية">
         <div class="nav-container">
-            <!-- Logo -->
-            <div class="logo-wrapper">
-                <a href="#home">
-                    <img src="assets/rafe_global_logo_concept_3.png" alt="Rafe Global Logo" class="logo-img">
+            <!-- Logo with Schema -->
+            <div class="logo-wrapper" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <a href="#home" itemprop="url">
+                    <img src="assets/rafe_global_logo_concept_3.png" 
+                         alt="شعار شركة رفع العالمية لتأجير المعدات الثقيلة" 
+                         class="logo-img"
+                         itemprop="logo">
                 </a>
             </div>
 
             <!-- Navigation links -->
-<div class="nav-menu" id="navMenu">
-    <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
-    <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">Equipment</a>
-    <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a>
-    <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
-    <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
-    <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-</div>
+            <div class="nav-menu" id="navMenu">
+                <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية" itemprop="url">الرئيسية</a>
+                <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">المعدات</a>
+                <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a>
+                <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">معرض الصور</a>
+                <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">لماذا نحن</a>
+                <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a>
+            </div>
+
             <!-- Mobile menu toggle -->
             <div class="nav-actions">
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="فتح/إغلاق القائمة">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,21 +129,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" itemscope itemtype="https://schema.org/WPHeader">
         <div class="hero-background">
-            <video autoplay muted loop playsinline class="hero-video">
+            <video autoplay muted loop playsinline class="hero-video" aria-label="فيديو لمعدات البناء الثقيلة">
                 <source src="./assets/hero-bg.mp4" type="video/mp4">
-                <source src="./assets/hero-bg.webm" type="video/webm">
-                <img src="./assets/hero-fallback.jpg" alt="Construction Equipment">
+                <source src="./assets/hero-bg.webm" type="video/webm"> 
+                <img src="./assets/hero-fallback.jpg" alt="معدات بناء ثقيلة تعمل في موقع بناء">
             </video>
             <div class="hero-overlay"></div>
         </div>
         
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title" data-en="Premium Equipment   Rental Solutions" data-ar="حلول تأجير المعدات المتميزة">Premium Equipment Rental Solutions</h1>
-                <p class="hero-subtitle" data-en="Trusted by leading construction companies across Saudi Arabia. Premium machinery, competitive rates, and 24/7 professional support." data-ar="موثوق من قبل شركات البناء الرائدة في جميع أنحاء المملكة العربية السعودية. معدات متميزة، أسعار تنافسية، ودعم احترافي على مدار الساعة">Trusted by leading construction companies across Saudi Arabia.</p>
-                <button class="cta-button primary" id="exploreEquipment" data-en="Explore Equipment" data-ar="استكشف المعدات">Explore Equipment</button>
+                <h1 class="hero-title" itemprop="headline" data-en="Premium Equipment Rental Solutions" data-ar="حلول تأجير المعدات المتميزة">رفع العالمية - الشركة الرائدة في تأجير المعدات الثقيلة</h1>
+                <p class="hero-subtitle" itemprop="description" data-en="Trusted by leading construction companies across Saudi Arabia" data-ar="موثوق من قبل شركات البناء الرائدة في جميع أنحاء المملكة العربية السعودية">موثوق من قبل كبرى شركات البناء والمقاولات في المملكة العربية السعودية</p>
+                <button class="cta-button primary" id="exploreEquipment" data-en="Explore Equipment" data-ar="استكشف المعدات">استكشف المعدات</button>
             </div>
         </div>
         
@@ -76,232 +151,331 @@
             <span></span>
         </div>
     </section>
-    
+
+    <!-- Hidden SEO Content -->
+    <div class="seo-content" style="display: none;">
+        <h1>رفع العالمية - تأجير المعدات الثقيلة في السعودية</h1>
+        <h2>شركة رفع العالمية لتأجير المعدات</h2>
+        <p>تعد شركة <strong>رفع العالمية</strong> من الشركات الرائدة في مجال تأجير المعدات الثقيلة والبناء في المملكة العربية السعودية. نحن نقدم حلولاً شاملة لتأجير المعدات بما في ذلك:</p>
+        <ul>
+            <li>تأجير معدات البناء الثقيلة في الرياض</li>
+            <li>تأجير رافعات شوكية للشركات والمصانع</li>
+            <li>تأجير كرينات متنقلة للمشاريع الكبيرة</li>
+            <li>تأجير معدات الوصول والارتفاع لأعمال الصيانة</li>
+            <li>تأجير أبراج الإضاءة لمواقع العمل ليلاً</li>
+            <li>تأجير معدات مناولة المواد للمستودعات</li>
+        </ul>
+        
+        <h3>خدمات تأجير المعدات في جميع أنحاء السعودية</h3>
+        <p>نخدم عملائنا في جميع مناطق المملكة العربية السعودية بما في ذلك:</p>
+        <ul>
+            <li>تأجير معدات في الرياض</li>
+            <li>تأجير معدات في جدة</li>
+            <li>تأجير معدات في الدمام والخبر</li>
+            <li>تأجير معدات في المدينة المنورة</li>
+            <li>تأجير معدات في مكة المكرمة</li>
+        </ul>
+        
+        <h3>أسعار تنافسية وجودة عالية</h3>
+        <p>نقدم <strong>أفضل أسعار تأجير المعدات</strong> في السوق السعودي مع الحفاظ على أعلى معايير الجودة والسلامة. جميع معداتنا تخضع لصيانة دورية وفحص مستمر.</p>
+    </div>
+
     <!-- Equipment Section -->
-    <section class="equipment" id="equipment">
+    <section class="equipment" id="equipment" itemscope itemtype="https://schema.org/ProductCollection">
         <div class="container">
             <div class="section-header">
-                <span class="section-label" data-en="OUR FLEET" data-ar="أسطولنا">OUR FLEET</span>
-                <h2 class="section-title" data-en="Professional Equipment for Every Project" data-ar="معدات احترافية لكل مشروع">Professional Equipment for Every Project</h2>
-                <p class="section-description" data-en="From compact tools to heavy machinery, we provide premium equipment with professional support and competitive rates. All equipment is regularly maintained and inspected." data-ar="من الأدوات الصغيرة إلى الآلات الثقيلة نوفر معدات متميزة مع دعم احترافي وأسعار تنافسية. يتم صيانة وفحص جميع المعدات بانتظام">From compact tools to heavy machinery, we provide premium equipment with professional support.</p>
+                <span class="section-label" data-en="OUR FLEET" data-ar="أسطولنا">أسطولنا</span>
+                <h2 class="section-title" data-en="Professional Equipment for Every Project" data-ar="معدات احترافية لكل مشروع">معدات احترافية لكل مشروع بناء</h2>
+                <p class="section-description" data-en="From compact tools to heavy machinery" data-ar="من الادوات الصغيرة إلى الآلات الثقيلة">من المعدات الصغيرة إلى الآلات الثقيلة، نقدم معدات عالية الجودة بدعم فني وأسعار تنافسية</p>
             </div>
-            
+
             <div class="equipment-grid">
                 <!-- Equipment Card 1 - Bobcat Loaders -->
-                <div class="equipment-card" data-category="heavy" data-equipment-id="1">
+                <div class="equipment-card" data-category="heavy" data-equipment-id="1" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="معدات ثقيلة">
                     <div class="card-number">01</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Bobcat.png" alt="Bobcat Loader" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Bobcat.png" 
+                             alt="تأجير بوبكات لودر في السعودية - معدات بناء صغيرة" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Bobcat Loaders" data-ar="محملات بوبكات">Bobcat Loaders</h3>
-                    <p class="card-description" data-en="Compact powerhouse for tight spaces" data-ar="قوة صغيرة للمساحات الضيقة">Compact powerhouse for tight spaces</p>
-                    <div class="card-specs">
-                        <span>1.5 - 3.5 Tons</span>
+                    <h3 class="card-title" itemprop="name" data-en="Bobcat Loaders" data-ar="محملات بوبكات">بوبكات لودر</h3>
+                    <p class="card-description" itemprop="description" data-en="Compact powerhouse for tight spaces" data-ar="معدات قوية للمساحات الضيقة">معدات قوية للمساحات الضيقة في مواقع البناء</p>
+                    <div class="card-specs" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+                        <span itemprop="name">السعة</span>
+                        <span itemprop="value">1.5 - 3.5 طن</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./heavy-equipment.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="1" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./heavy-equipment.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="1">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                
+
                 <!-- Equipment Card 2 - Scissor Lifts -->
-                <div class="equipment-card" data-category="access" data-equipment-id="2">
+                <div class="equipment-card" data-category="access" data-equipment-id="2" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="معدات وصول">
                     <div class="card-number">02</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/scissor-lift.png" alt="Scissor Lift" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/scissor-lift.png" 
+                             alt="تأجير منصات رفع مقصية - معدات وصول آمنة" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Scissor Lifts" data-ar="رافعات مقصية">Scissor Lifts</h3>
-                    <p class="card-description" data-en="Safe elevated access solutions" data-ar="حلول وصول آمنة مرتفعة">Safe elevated access solutions</p>
+                    <h3 class="card-title" itemprop="name" data-en="Scissor Lifts" data-ar="منصات رفع مقصية">منصات رفع مقصية</h3>
+                    <p class="card-description" itemprop="description" data-en="Safe elevated access solutions" data-ar="حلول آمنة للوصول المرتفع">حلول آمنة لأعمال الصيانة والتركيب على المرتفعات</p>
                     <div class="card-specs">
-                        <span>6 - 18 m</span>
+                        <span>6 - 18 متر</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./access-equipment.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="2" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./access-equipment.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="2">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                
+
                 <!-- Equipment Card 3 - Mobile Cranes -->
-                <div class="equipment-card" data-category="heavy" data-equipment-id="3">
+                <div class="equipment-card" data-category="heavy" data-equipment-id="3" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="كرينات">
                     <div class="card-number">03</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Mobile Cranes.png" alt="Mobile Crane" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Mobile Cranes.png" 
+                             alt="تأجير كرينات متنقلة - رفع الأحمال الثقيلة" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Mobile Cranes" data-ar="رافعات متنقلة">Mobile Cranes</h3>
-                    <p class="card-description" data-en="Heavy-duty lifting for large projects" data-ar="رفع ثقيل للمشاريع الكبيرة">Heavy-duty lifting for large projects</p>
+                    <h3 class="card-title" itemprop="name" data-en="Mobile Cranes" data-ar="كرينات متنقلة">كرينات متنقلة</h3>
+                    <p class="card-description" itemprop="description" data-en="Heavy-duty lifting for large projects" data-ar="رفع الأحمال الثقيلة للمشاريع الكبيرة">رفع الأحمال الثقيلة للمشاريع الإنشائية الكبيرة</p>
                     <div class="card-specs">
-                        <span>25 - 500 Tons</span>
+                        <span>25 - 500 طن</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./heavy-equipment.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="3" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./heavy-equipment.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="3">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                
+
                 <!-- Equipment Card 4 - Forklifts -->
-                <div class="equipment-card" data-category="material" data-equipment-id="4">
+                <div class="equipment-card" data-category="material" data-equipment-id="4" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="رافعات شوكية">
                     <div class="card-number">04</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Forklifts.png" alt="Forklift" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Forklifts.png" 
+                             alt="تأجير رافعات شوكية - مناولة المواد" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Forklifts" data-ar="رافعات شوكية">Forklifts</h3>
-                    <p class="card-description" data-en="Efficient material handling" data-ar="معالجة المواد بكفاءة">Efficient material handling</p>
+                    <h3 class="card-title" itemprop="name" data-en="Forklifts" data-ar="رافعات شوكية">رافعات شوكية</h3>
+                    <p class="card-description" itemprop="description" data-en="Efficient material handling" data-ar="مناولة المواد بكفاءة">معدات مناولة المواد للمستودعات ومواقع البناء</p>
                     <div class="card-specs">
-                        <span>1.5 - 5 Tons</span>
+                        <span>1.5 - 5 طن</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./material-handling.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="4" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./material-handling.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="4">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                
+
                 <!-- Equipment Card 5 - Telescopic Forklifts -->
-                <div class="equipment-card" data-category="material" data-equipment-id="5">
+                <div class="equipment-card" data-category="material" data-equipment-id="5" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="رافعات تلسكوبية">
                     <div class="card-number">05</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Telescopic Forklifts.jpeg" alt="Telescopic Forklift" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Telescopic Forklifts.jpeg" 
+                             alt="تأجير رافعات شوكية تلسكوبية - مدى موسع" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Telescopic Forklifts" data-ar="رافعات شوكية تلسكوبية">Telescopic Forklifts</h3>
-                    <p class="card-description" data-en="Extended reach for complex operations" data-ar="مدى موسع للعمليات المعقدة">Extended reach for complex operations</p>
+                    <h3 class="card-title" itemprop="name" data-en="Telescopic Forklifts" data-ar="رافعات شوكية تلسكوبية">رافعات شوكية تلسكوبية</h3>
+                    <p class="card-description" itemprop="description" data-en="Extended reach for complex operations" data-ar="مدى موسع للعمليات المعقدة">مدى موسع للعمليات المعقدة والتكديس على ارتفاعات</p>
                     <div class="card-specs">
-                        <span>Up to 12 m</span>
+                        <span>حتى 12 متر</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./material-handling.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="5" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./material-handling.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="5">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                
+
                 <!-- Equipment Card 6 - Man Lifts -->
-                <div class="equipment-card" data-category="access" data-equipment-id="6">
+                <div class="equipment-card" data-category="access" data-equipment-id="6" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="رافعات أشخاص">
                     <div class="card-number">06</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Manlift.png" alt="Man Lift" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Manlift.png" 
+                             alt="تأجير رافعات أشخاص - رفع آمن للعمال" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Man Lifts" data-ar="رافعات الأشخاص">Man Lifts</h3>
-                    <p class="card-description" data-en="Safe personnel elevation" data-ar="رفع آمن للموظفين">Safe personnel elevation</p>
+                    <h3 class="card-title" itemprop="name" data-en="Man Lifts" data-ar="رافعات الأشخاص">رافعات أشخاص</h3>
+                    <p class="card-description" itemprop="description" data-en="Safe personnel elevation" data-ar="رفع آمن للموظفين">رفع آمن للعمال والفنيين لأعمال الصيانة على المرتفعات</p>
                     <div class="card-specs">
-                        <span>12 - 43 m</span>
+                        <span>12 - 43 متر</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./access-equipment.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="6" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./access-equipment.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="6">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                
+
                 <!-- Equipment Card 7 - Light Towers -->
-                <div class="equipment-card" data-category="light" data-equipment-id="7">
+                <div class="equipment-card" data-category="light" data-equipment-id="7" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="أبراج إضاءة">
                     <div class="card-number">07</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Light Towers.jpeg" alt="Light Tower" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Light Towers.jpeg" 
+                             alt="تأجير أبراج إضاءة - إضاءة مواقع العمل" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Light Towers" data-ar="أبراج الإضاءة">Light Towers</h3>
-                    <p class="card-description" data-en="Powerful site lighting" data-ar="إضاءة قوية للموقع">Powerful site lighting</p>
+                    <h3 class="card-title" itemprop="name" data-en="Light Towers" data-ar="أبراج الإضاءة">أبراج الإضاءة</h3>
+                    <p class="card-description" itemprop="description" data-en="Powerful site lighting" data-ar="إضاءة قوية للموقع">إضاءة قوية لمواقع العمل والبناء ليلاً</p>
                     <div class="card-specs">
-                        <span>4x1000W LED</span>
+                        <span>4×1000 واط LED</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./lighting.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="7" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./lighting.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="7">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
-                                <!-- Equipment Card 9 - Hand Pallet Truck -->
-                <div class="equipment-card" data-category="material" data-equipment-id="9">
-                    <div class="card-number">09</div>
-                    <div class="card-image">
-                        <img src="./assets/equipment/pallet-jack-carrying-stacked-cardboard-boxes.jpg" alt="Hand Pallet Truck" loading="lazy">
-                        <!-- No overlay for clean images as we fixed -->
-                    </div>
-                    <h3 class="card-title" data-en="Hand Pallet Truck" data-ar="عربة ناقلة يدوية">Hand Pallet Truck</h3>
-                    <p class="card-description" data-en="Manual handling for efficient warehouse transport" data-ar="نقل يدوي فعال داخل المستودعات">Manual handling for efficient warehouse transport</p>
-                    <div class="card-specs">
-                        <span data-en="Capacity: 2-3 Tons" data-ar="السعة: 2-3 طن">Capacity: 2-3 Tons</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./material-handling.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="9" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
-                    </div>
-                </div>
-                
-                <!-- Equipment Card 10 - Truck with Manipulator -->
-                <div class="equipment-card" data-category="material" data-equipment-id="10">
-                    <div class="card-number">10</div>
-                    <div class="card-image">
-                        <img src="./assets/equipment/crane_tauck_white.png" alt="Truck with Manipulator Arm" loading="lazy">
-                        <!-- No overlay for clean images as we fixed -->
-                    </div>
-                    <h3 class="card-title" data-en="Truck with Manipulator" data-ar="شاحنة مع ذراع معالجة">Truck with Manipulator</h3>
-                    <p class="card-description" data-en="Versatile loading & unloading with hydraulic arm" data-ar="تحميل وتفريغ متعدد الاستخدامات بذراع هيدروليكي">Versatile loading & unloading with hydraulic arm</p>
-                    <div class="card-specs">
-                        <span data-en="Load: 1,000 kg, Reach: 7m" data-ar="الحمولة: ١٠٠٠ كجم، المدى: ٧ م">Load: 1,000 kg, Reach: 7m</span>
-                    </div>
-                    <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./material-handling.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="10" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
-                    </div>
-                </div>
+
                 <!-- Equipment Card 8 - Industrial Forklifts -->
-                <div class="equipment-card" data-category="heavy" data-equipment-id="8">
+                <div class="equipment-card" data-category="heavy" data-equipment-id="8" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="رافعات صناعية">
                     <div class="card-number">08</div>
                     <div class="card-image">
-                        <img src="./assets/equipment/Forklifts.png" alt="Industrial Forklift" loading="lazy">
-                        <div class="image-overlay"></div>
+                        <img src="./assets/equipment/Forklifts.png" 
+                             alt="تأجير رافعات شوكية صناعية - مصانع ومستودعات" 
+                             loading="lazy"
+                             itemprop="image">
                     </div>
-                    <h3 class="card-title" data-en="Industrial Forklifts" data-ar="رافعات شوكية صناعية">Industrial Forklifts</h3>
-                    <p class="card-description" data-en="Industrial forklifts with multiple ton capacities" data-ar="رافعات شوكية صناعية بسعات متعددة">Industrial forklifts with multiple ton capacities</p>
+                    <h3 class="card-title" itemprop="name" data-en="Industrial Forklifts" data-ar="رافعات شوكية صناعية">رافعات شوكية صناعية</h3>
+                    <p class="card-description" itemprop="description" data-en="Industrial forklifts with multiple ton capacities" data-ar="رافعات شوكية صناعية بسعات متعددة">رافعات شوكية صناعية لرفع الأحمال الثقيلة في المصانع</p>
                     <div class="card-specs">
-                        <span>1.5 - 25 Tons</span>
+                        <span>1.5 - 25 طن</span>
                     </div>
                     <div class="card-actions">
-                        <button class="card-button view-details" data-en="View Details" data-ar="عرض التفاصيل" onclick="window.location.href='./heavy-equipment.html'">View Details</button>
-                        <button class="card-button rent-now" data-equipment-id="8" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                        <button class="card-button view-details" onclick="window.location.href='./heavy-equipment.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="8">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Equipment Card 9 - Hand Pallet Truck -->
+                <div class="equipment-card" data-category="material" data-equipment-id="9" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="عربات ناقلة">
+                    <div class="card-number">09</div>
+                    <div class="card-image">
+                        <img src="./assets/equipment/pallet-jack-carrying-stacked-cardboard-boxes.jpg" 
+                             alt="تأجير عربات ناقلة يدوية - مستودعات ومخازن" 
+                             loading="lazy"
+                             itemprop="image">
+                    </div>
+                    <h3 class="card-title" itemprop="name" data-en="Hand Pallet Truck" data-ar="عربة ناقلة يدوية">عربات ناقلة يدوية</h3>
+                    <p class="card-description" itemprop="description" data-en="Manual handling for efficient warehouse transport" data-ar="نقل يدوي فعال داخل المستودعات">نقل يدوي فعال للمواد والبضائع داخل المستودعات والمخازن</p>
+                    <div class="card-specs">
+                        <span data-en="Capacity: 2-3 Tons" data-ar="السعة: 2-3 طن">السعة: 2-3 طن</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-button view-details" onclick="window.location.href='./material-handling.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="9">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Equipment Card 10 - Truck with Manipulator -->
+                <div class="equipment-card" data-category="material" data-equipment-id="10" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="category" content="شاحنات معالجة">
+                    <div class="card-number">10</div>
+                    <div class="card-image">
+                        <img src="./assets/equipment/crane_tauck_white.png" 
+                             alt="تأجير شاحنة مع ذراع معالجة - تحميل وتفريغ" 
+                             loading="lazy"
+                             itemprop="image">
+                    </div>
+                    <h3 class="card-title" itemprop="name" data-en="Truck with Manipulator" data-ar="شاحنة مع ذراع معالجة">شاحنة مع ذراع معالجة</h3>
+                    <p class="card-description" itemprop="description" data-en="Versatile loading & unloading with hydraulic arm" data-ar="تحميل وتفريغ متعدد الاستخدامات بذراع هيدروليكي">تحميل وتفريغ متعدد الاستخدامات بذراع هيدروليكي للتوصيل والتفريغ</p>
+                    <div class="card-specs">
+                        <span data-en="Load: 1,000 kg, Reach: 7m" data-ar="الحمولة: 1000 كجم، المدى: 7م">الحمولة: 1000 كجم، المدى: 7م</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="card-button view-details" onclick="window.location.href='./material-handling.html'">
+                            <span data-en="View Details" data-ar="عرض التفاصيل">عرض التفاصيل</span>
+                        </button>
+                        <button class="card-button rent-now" data-equipment-id="10">
+                            <span data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</span>
+                        </button>
                     </div>
                 </div>
             </div>
-            
-            
+
             <div class="category-links">
-                <a href="#equipment" class="category-link active" data-en="All Equipment" data-ar="جميع المعدات">All Equipment</a>
-                <a href="./heavy-equipment.html" class="category-link" data-en="Heavy Equipment" data-ar="المعدات الثقيلة">Heavy Equipment</a>
-                <a href="./access-equipment.html" class="category-link" data-en="Access Equipment" data-ar="معدات الوصول">Access Equipment</a>
-                <a href="./material-handling.html" class="category-link" data-en="Material Handling" data-ar="مناولة المواد">Material Handling</a>
-                <a href="./lighting.html" class="category-link" data-en="Lighting" data-ar="الإضاءة">Lighting</a>
+                <a href="#equipment" class="category-link active" data-en="All Equipment" data-ar="جميع المعدات">جميع المعدات</a>
+                <a href="./heavy-equipment.html" class="category-link" data-en="Heavy Equipment" data-ar="المعدات الثقيلة">المعدات الثقيلة</a>
+                <a href="./access-equipment.html" class="category-link" data-en="Access Equipment" data-ar="معدات الوصول">معدات الوصول</a>
+                <a href="./material-handling.html" class="category-link" data-en="Material Handling" data-ar="مناولة المواد">مناولة المواد</a>
+                <a href="./lighting.html" class="category-link" data-en="Lighting" data-ar="الإضاءة">الإضاءة</a>
             </div>
         </div>
     </section>
-    
-    
+
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" itemscope itemtype="https://schema.org/AboutPage">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title" data-en="Why Choose Rafe Global?" data-ar="لماذا تختار رفع العالمية؟">Why Choose Rafe Global?</h2>
-                    <p class="about-description" data-en="With many years of experience in equipment rental, we understand the unique needs of construction companies, event organizers, and industrial facilities. Our commitment to quality, reliability, and customer service sets us apart." data-ar="مع أكثر من 15 سنة من الخبرة في تأجير المعدات، نفهم الاحتياجات الفريدة لشركات البناء ومنظمي الفعاليات والمرافق الصناعية. التزامنا بالجودة والموثوقية وخدمة العملاء يميزنا">With over 3 years of experience in equipment rental...</p>
+                    <h2 class="section-title" data-en="Why Choose Rafe Global?" data-ar="لماذا تختار رفع العالمية؟">لماذا تختار رفع العالمية لتأجير المعدات؟</h2>
+                    <p class="about-description" data-en="With many years of experience..." data-ar="مع أكثر من 5 سنوات من الخبرة في تأجير المعدات">مع أكثر من 5 سنوات من الخبرة في تأجير المعدات في السعودية، نفهم احتياجات شركات البناء والمقاولات</p>
                     
                     <div class="features-list">
                         <div class="feature-item">
                             <span class="feature-icon">✓</span>
-                            <span class="feature-text" data-en="2500+ Happy Clients" data-ar="+2500 عميل سعيد">2500+ Happy Clients</span>
+                            <span class="feature-text" data-en="2500+ Happy Clients" data-ar="+2500 عميل سعيد">أكثر من 2500 عميل راضي</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon">✓</span>
-                            <span class="feature-text" data-en="500+ Equipment Units" data-ar="+500 وحدة معدات">500+ Equipment Units</span>
+                            <span class="feature-text" data-en="500+ Equipment Units" data-ar="+500 وحدة معدات">أكثر من 500 وحدة معدات</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon">✓</span>
-                            <span class="feature-text" data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</span>
+                            <span class="feature-text" data-en="24/7 Support" data-ar="دعم على مدار الساعة">دعم فني 24/7</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon">✓</span>
-                            <span class="feature-text" data-en="Competitive Pricing" data-ar="أسعار تنافسية">Competitive Pricing</span>
+                            <span class="feature-text" data-en="Competitive Pricing" data-ar="أسعار تنافسية">أسعار تنافسية في السوق</span>
                         </div>
                     </div>
                 </div>
@@ -309,115 +483,144 @@
                 <div class="about-stats">
                     <div class="stat-card">
                         <div class="stat-number">5+</div>
-                        <div class="stat-label" data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</div>
+                        <div class="stat-label" data-en="Years Experience" data-ar="سنوات خبرة">سنوات خبرة</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">500+</div>
-                        <div class="stat-label" data-en="Equipment Units" data-ar="وحدة معدات">Equipment Units</div>
+                        <div class="stat-label" data-en="Equipment Units" data-ar="وحدة معدات">وحدة معدات</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">98%</div>
-                        <div class="stat-label" data-en="Client Satisfaction" data-ar="رضا العملاء">Client Satisfaction</div>
+                        <div class="stat-label" data-en="Client Satisfaction" data-ar="رضا العملاء">رضا العملاء</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" itemscope itemtype="https://schema.org/ContactPage">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</h2>
-                <p class="section-description" data-en="Have questions? Our team is ready to help you find the perfect equipment for your project." data-ar="لديك أسئلة؟ فريقنا جاهز لمساعدتك في العثور على المعدات المثالية لمشروعك">Have questions? Contact us today!</p>
+                <h2 class="section-title" data-en="Get in Touch" data-ar="تواصل معنا">تواصل معنا لطلب المعدات</h2>
+                <p class="section-description" data-en="Have questions? Our team is ready to help" data-ar="لديك أسئلة؟ فريقنا جاهز لمساعدتك">لديك استفسار عن تأجير المعدات؟ فريقنا جاهز لمساعدتك في اختيار المعدات المناسبة</p>
             </div>
             
             <div class="contact-grid">
-                <div class="contact-card">
+                <div class="contact-card" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
                     <div class="contact-icon">📞</div>
-                    <h3 data-en="Phone" data-ar="هاتف">Phone</h3>
-                    <p><a href="tel:+966534672153" class="ltr-number">+966 53 467 2153</a></p>
+                    <h3 itemprop="name" data-en="Phone" data-ar="الهاتف">الهاتف</h3>
+                    <p><a href="tel:+966534672153" class="ltr-number" itemprop="telephone">+966 53 467 2153</a></p>
                 </div>
                 
-                <div class="contact-card">
+                <div class="contact-card" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
                     <div class="contact-icon">✉️</div>
-                    <h3 data-en="Email" data-ar="البريد الإلكتروني">Email</h3>
-                    <p><a href="mailto:globalrafe@gmail.com">globalrafe@gmail.com</a></p>
+                    <h3 itemprop="name" data-en="Email" data-ar="البريد الإلكتروني">البريد الإلكتروني</h3>
+                    <p><a href="mailto:globalrafe@gmail.com" itemprop="email">globalrafe@gmail.com</a></p>
                 </div>
                 
-                <div class="contact-card">
+                <div class="contact-card" itemprop="location" itemscope itemtype="https://schema.org/Place">
                     <div class="contact-icon">📍</div>
-                    <h3 data-en="Location" data-ar="الموقع">Location</h3>
-                    <p data-en="Riyadh, Saudi Arabia" data-ar="الرياض، المملكة العربية السعودية">Riyadh, Saudi Arabia</p>
+                    <h3 itemprop="name" data-en="Location" data-ar="الموقع">الموقع</h3>
+                    <p itemprop="address" data-en="Riyadh, Saudi Arabia" data-ar="الرياض، السعودية">الرياض، المملكة العربية السعودية</p>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">💬</div>
-                    <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
-                    <p><a href="https://wa.me/+966534672153" target="_blank" rel="noopener noreferrer" data-en="Chat with us" data-ar="تحدث معنا">Chat with us</a></p>
+                    <h3 data-en="WhatsApp" data-ar="واتساب">واتساب</h3>
+                    <p><a href="https://wa.me/+966534672153" target="_blank" rel="noopener noreferrer" data-en="Chat with us" data-ar="تحدث معنا">تحدث معنا مباشرة</a></p>
                 </div>
+            </div>
+            
+            <!-- Hidden Local SEO Content -->
+            <div class="local-seo" style="display: none;">
+                <h4>تأجير معدات في جميع مدن السعودية:</h4>
+                <p>نقدم خدمة تأجير المعدات الثقيلة في جميع مدن المملكة العربية السعودية بما في ذلك: الرياض، جدة، الدمام، الخبر، المدينة المنورة، مكة المكرمة، الطائف، تبوك، حائل، القصيم، أبها، جازان، نجران، الباحة، الجوف، عرعر، سكاكا.</p>
+                
+                <h4>معدات البناء المتوفرة للايجار:</h4>
+                <ul>
+                    <li>تأجير حفارات (Excavators)</li>
+                    <li>تأجير بلدوزرات (Bulldozers)</li>
+                    <li>تأجير شيولات (Loaders)</li>
+                    <li>تأجير رافعات برجية (Tower Cranes)</li>
+                    <li>تأجير خلاطات خرسانة (Concrete Mixers)</li>
+                    <li>تأجير معدات طرق (Road Equipment)</li>
+                    <li>تأجير معدات تسوية (Grading Equipment)</li>
+                </ul>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4 data-en="Company" data-ar="الشركة">Company</h4>
+                    <h4 data-en="Company" data-ar="الشركة">الشركة</h4>
                     <ul>
-                        <li><a href="#about" data-en="About Us" data-ar="عن الشركة">About Us</a></li>
-                        <li><a href="#equipment" data-en="Our Equipment" data-ar="معداتنا">Our Equipment</a></li>
-                        <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                        <li><a href="#about" data-en="About Us" data-ar="عن الشركة">عن الشركة</a></li>
+                        <li><a href="#equipment" data-en="Our Equipment" data-ar="معداتنا">معداتنا</a></li>
+                        <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 data-en="Support" data-ar="الدعم">Support</h4>
+                    <h4 data-en="Support" data-ar="الدعم">الدعم</h4>
                     <ul>
-                        <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
-                        <li><a href="#" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
-                        <li><a href="#" data-en="Rental Terms" data-ar="شروط الاستئجار">Rental Terms</a></li>
+                        <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+                        <li><a href="#" data-en="FAQ" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+                        <li><a href="#" data-en="Rental Terms" data-ar="شروط الاستئجار">شروط الاستئجار</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4 data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h4>
-                    <p><strong data-en="Phone:" data-ar="هاتف:">Phone:</strong> <span class="ltr-number">+966 53 467 2153</span></p>
-                    <p><strong data-en="Email:" data-ar="البريد الإلكتروني:">Email:</strong> globalrafe@gmail.com</p>
-                    <p><strong data-en="Address:" data-ar="العنوان:">Address:</strong> Riyadh, Saudi Arabia</p>
+                    <h4 data-en="Contact Info" data-ar="معلومات الاتصال">معلومات الاتصال</h4>
+                    <p><strong>الهاتف:</strong> <span class="ltr-number">+966 53 467 2153</span></p>
+                    <p><strong>البريد الإلكتروني:</strong> globalrafe@gmail.com</p>
+                    <p><strong>الموقع:</strong> الرياض، السعودية</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-en="Services" data-ar="الخدمات">خدماتنا</h4>
+                    <ul>
+                        <li><a href="./heavy-equipment.html" data-ar="المعدات الثقيلة">تأجير المعدات الثقيلة</a></li>
+                        <li><a href="./access-equipment.html" data-ar="معدات الوصول">تأجير معدات الوصول</a></li>
+                        <li><a href="./material-handling.html" data-ar="مناولة المواد">تأجير معدات المناولة</a></li>
+                        <li><a href="./lighting.html" data-ar="الإضاءة">تأجير أبراج الإضاءة</a></li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p data-en="© 2025 Rafe Global Equipment Rental. All rights reserved." data-ar="© 2024 رفع العالمية لتأجير المعدات. جميع الحقوق محفوظة.">© 2024 Rafe Global Equipment Rental. All rights reserved.</p>
+                <p data-en="© 2025 Rafe Global Equipment Rental. All rights reserved." 
+                   data-ar="© 2025 رفع العالمية لتأجير المعدات. جميع الحقوق محفوظة.">
+                   © 2025 رفع العالمية لتأجير المعدات. جميع الحقوق محفوظة.
+                </p>
             </div>
         </div>
     </footer>
-    
-    <!-- Rental Contact Modal -->
+
+    <!-- Rental Modal -->
     <div class="modal" id="rentalModal">
         <div class="modal-content rental-modal">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <button class="modal-close" aria-label="إغلاق">&times;</button>
             <div class="modal-header">
-                <h2 data-en="Rent Equipment" data-ar="استأجر المعدات">Rent Equipment</h2>
-                <p id="rentalEquipmentName">Equipment Name</p>
+                <h2 data-en="Rent Equipment" data-ar="طلب تأجير المعدات">طلب تأجير المعدات</h2>
+                <p id="rentalEquipmentName">اسم المعدة</p>
             </div>
             <div class="modal-body">
                 <p class="rental-intro" data-en="Choose your preferred contact method:" 
                    data-ar="اختر طريقة الاتصال المفضلة لديك:">
-                    Choose your preferred contact method:
+                   اختر طريقة الاتصال المفضلة لديك:
                 </p>
                 <div class="rental-buttons">
-                    <a href="https://wa.me/+966534672153" class="rental-btn whatsapp-main" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/+966534672153" class="rental-btn whatsapp-main" 
+                       target="_blank" rel="noopener noreferrer">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
                         </svg>
                         <div>
-                            <div class="btn-title" data-en="Chat on WhatsApp" data-ar="محادثة عبر واتساب">
-                                Chat on WhatsApp
-                            </div>
+                            <div class="btn-title" data-en="Chat on WhatsApp" data-ar="محادثة واتساب">محادثة واتساب</div>
                             <div class="btn-subtitle ltr-number">+966 53 467 2153</div>
                         </div>
                     </a>
@@ -427,41 +630,39 @@
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                         <div>
-                            <div class="btn-title" data-en="Send Email" data-ar="إرسال بريد إلكتروني">
-                                Send Email
-                            </div>
-                            <div class="btn-subtitle" data-en="Detailed Quote" data-ar="عرض مفصل">
-                                Detailed Quote
-                            </div>
+                            <div class="btn-title" data-en="Send Email" data-ar="إرسال بريد إلكتروني">إرسال بريد إلكتروني</div>
+                            <div class="btn-subtitle" data-en="Detailed Quote" data-ar="عرض مفصل">عرض سعر مفصل</div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Menu Overlay -->
     <div class="menu-overlay"></div>
+
+    <script src="./js/script.js?v=2.2"></script>
     
-    <script src="./js/script.js?v=2.1"></script>
-<!-- Elegant WhatsApp Floating Button -->
-<div class="whatsapp-container">
-    <a href="https://wa.me/+966534672153" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="WhatsApp">
-        <div class="whatsapp-icon-wrapper">
-            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.032,12.366c-0.344,0.196-0.693,0.406-0.693,0.815c0,0.406,0.554,0.815,0.901,1.08 c0.348,0.266,0.826,0.406,1.297,0.406c0.48,0,0.934-0.154,1.297-0.406c0.365-0.25,0.901-0.683,0.901-1.08 c0-0.409-0.357-0.619-0.693-0.815c-0.339-0.196-0.826-0.406-1.505-0.406C12.858,11.96,12.371,12.17,12.032,12.366z M17.606,6.384 c-2.199-2.199-5.297-3.231-8.28-2.704C6.242,4.161,4.264,5.664,3.054,7.734C1.845,9.804,1.5,12.246,2.083,14.5 c0.009,0.035,0.021,0.069,0.035,0.102l-1.399,5.114l5.151-1.366c0.035,0.015,0.071,0.027,0.107,0.037 c2.258,0.583,4.704,0.238,6.774-0.971c2.07-1.21,3.573-3.188,4.054-5.272C20.837,11.681,19.805,8.583,17.606,6.384z M16.656,15.358 c-1.836,1.074-4.006,1.441-6.083,1.04l-0.108-0.024l-0.104,0.027l-3.746,0.992l0.998-3.647l0.026-0.095l-0.022-0.102 c-0.402-2.077-0.034-4.247,1.04-6.083c1.074-1.836,2.876-2.964,4.844-3.118c1.967-0.154,3.914,0.564,5.277,1.927 c1.363,1.363,2.081,3.31,1.927,5.277C19.619,12.482,18.492,14.284,16.656,15.358z"/>
-            </svg>
-            <div class="whatsapp-pulse"></div>
-        </div>
-        <div class="whatsapp-tooltip">
-            <span data-en="Chat with us on WhatsApp" data-ar="تحدث معنا عبر واتساب">Chat with us on WhatsApp</span>
-            <span class="whatsapp-number">+966 53 467 2153</span>
-        </div>
-    </a>
-</div>
+    <!-- Elegant WhatsApp Floating Button -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/+966534672153" 
+           class="whatsapp-float"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="محادثة واتساب"
+           title="تواصل معنا على واتساب لطلب المعدات">
+            <div class="whatsapp-icon-wrapper">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.032,12.366c-0.344,0.196-0.693,0.406-0.693,0.815c0,0.406,0.554,0.815,0.901,1.08c0.348,0.266,0.826,0.406,1.297,0.406c0.48,0,0.934-0.154,1.297-0.406c0.365-0.25,0.901-0.683,0.901-1.08c0-0.409-0.357-0.619-0.693-0.815c-0.339-0.196-0.826-0.406-1.505-0.406c12.858,11.96,12.371,12.17,12.032,12.366z M17.606,6.384c-2.199-2.199-5.297-3.231-8.28-2.704c6.242,4.161,4.264,5.664,3.054,7.734c1.845,9.804,1.5,12.246,2.083,14.5c0.009,0.035,0.021,0.069,0.035,0.1021-1.399,5.11415.151-1.366c0.035,0.015,0.071,0.027,0.107,0.037c2.258,0.583,4.704,0.238,6.774-0.971c2.07-1.21,3.573-3.188,4.054-5.272c20.337,11.681,19.805,8.583,17.606,6.384z M16.656,15.358c-1.836,1.074-4.006,1.441-6.083,1.041-0.108-0.0241-0.104,0.0271-3.746,0.99210.998-3.64710.026-0.0951-0.022-0.102c-0.402-2.077-0.034-4.247,1.04-6.083c1.074-1.836,2.876-2.964,4.844-3.118c1.967-0.154,3.914,0.564,5.277,1.927c1.363,1.363,2.081,3.31,1.927,5.277C19.619,12.482,18.492,14.284,16.656,15.358z"/>
+                </svg>
+                <div class="whatsapp-pulse"></div>
+            </div>
+            <div class="whatsapp-tooltip">
+                <span data-en="Chat with us on WhatsApp" data-ar="تواصل معنا على واتساب">تواصل معنا على واتساب</span>
+                <span class="whatsapp-number">+966 53 467 2153</span>
+            </div>
+        </a>
+    </div>
 </body>
 </html>

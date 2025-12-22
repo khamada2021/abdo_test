@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="رفع العالمية - Material Handling Equipment Rental in Saudi Arabia. Forklifts and Telescopic Forklifts for warehouses and construction sites.">
-    <meta name="keywords" content="material handling equipment, forklifts rental, warehouse equipment, Saudi Arabia">
-    <meta name="author" content="Rafe Global Equipment">
-    <meta name="theme-color" content="#fbbf24">
-    <meta property="og:title" content="رفع العالمية - Material Handling Equipment Rental">
-    <meta property="og:description" content="Essential equipment for warehouses, distribution centers, and construction sites">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="تأجير معدات مناولة المواد في السعودية - رافعات شوكية، رافعات تلسكوبية، عربات ناقلة، شاحنات مع ذراع. معدات فعالة للمستودعات ومواقع البناء.">
+    <meta name="keywords" content="تأجير معدات مناولة, تأجير رافعات شوكية, تأجير رافعات تلسكوبية, تأجير عربات ناقلة, معدات مستودعات, تأجير في الرياض, مناولة المواد, Rafe Global, material handling equipment rental Saudi Arabia">
+    <meta name="author" content="رفع العالمية - تأجير معدات المناولة">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="تأجير معدات مناولة المواد في السعودية | رفع العالمية">
+    <meta property="og:description" content="تأجير معدات مناولة المواد للمستودعات ومراكز التوزيع ومواقع البناء في المملكة العربية السعودية.">
     <meta property="og:type" content="website">
-    <title>رفع العالمية - Material Handling Equipment | Rafe Global</title>
-    <link rel="stylesheet" href="./css/styles.css?v=2.0">
+    <meta property="og:url" content="https://rafeglobal.com/material-handling.html">
+    
+    <!-- Canonical and Language -->
+    <link rel="canonical" href="https://rafeglobal.com/material-handling.html">
+    <link rel="alternate" hreflang="ar" href="https://rafeglobal.com/material-handling.html">
+    <link rel="alternate" hreflang="en" href="https://rafeglobal.com/material-handling.html?lang=en">
+    
+    <meta name="theme-color" content="#fbbf24">
+    <title>تأجير معدات مناولة المواد في السعودية | رافعات شوكية | رافعات تلسكوبية | عربات ناقلة | رفع العالمية</title>
+    
+    <!-- Schema for Material Handling -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "تأجير معدات مناولة المواد في السعودية",
+      "description": "صفحة تأجير معدات مناولة المواد من شركة رفع العالمية - تأجير رافعات شوكية، رافعات تلسكوبية، عربات ناقلة، شاحنات مع ذراع",
+      "url": "https://rafeglobal.com/material-handling.html",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://rafeglobal.com/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "معدات المناولة",
+          "item": "https://rafeglobal.com/material-handling.html"
+        }]
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="./css/styles.css?v=2.1">
     <link rel="stylesheet" href="./css/category-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +57,8 @@
 <body>
     <!-- Language Switcher -->
     <div class="language-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn active" data-lang="ar" aria-label="العربية">AR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
     </div>
 
     <!-- Navigation -->
@@ -30,22 +67,25 @@
             <!-- Logo -->
             <div class="logo-wrapper">
                 <a href="./index.html#home">
-                    <img src="assets/rafe_global_logo_concept_3.png" alt="Rafe Global Logo" class="logo-img">
+                    <img src="assets/rafe_global_logo_concept_3.png" 
+                         alt="شعار رفع العالمية - تأجير معدات المناولة" 
+                         class="logo-img">
                 </a>
             </div>
 
-           <!-- Navigation links -->
-<div class="nav-menu" id="navMenu">
-    <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a>
-    <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">Equipment</a>
-    <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a>
-    <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
-    <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
-    <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-</div>
+            <!-- Navigation links -->
+            <div class="nav-menu" id="navMenu">
+                <a href="./index.html#home" class="nav-link" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
+                <a href="./index.html#equipment" class="nav-link" data-en="Equipment" data-ar="المعدات">المعدات</a>
+                <a href="./services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a>
+                <a href="./gallery.html" class="nav-link" data-en="Gallery" data-ar="معرض الصور">معرض الصور</a>
+                <a href="./index.html#about" class="nav-link" data-en="Why Us" data-ar="لماذا نحن">لماذا نحن</a>
+                <a href="./index.html#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a>
+            </div>
+
             <!-- Mobile menu toggle -->
             <div class="nav-actions">
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="فتح/إغلاق القائمة">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,9 +97,34 @@
     <!-- Category Header -->
     <section class="category-header">
         <div class="container">
-            <a href="./index.html" class="back-link" data-en="← Back to All Equipment" data-ar="← العودة إلى جميع المعدات">← Back to All Equipment</a>
-            <h1 class="category-title" data-en="Material Handling Equipment" data-ar="معدات معالجة المواد">Material Handling Equipment</h1>
-            <p class="category-description" data-en="Essential equipment for warehouses, distribution centers, and construction sites. Efficient material movement and stacking solutions." data-ar="معدات أساسية للمستودعات ومراكز التوزيع ومواقع البناء. حلول فعالة لتحريك وتكديس المواد">Essential equipment for warehouses, distribution centers, and construction sites.</p>
+            <a href="./index.html" class="back-link" data-en="← Back to All Equipment" data-ar="← العودة إلى جميع المعدات">← العودة إلى جميع المعدات</a>
+            <h1 class="category-title" data-en="Material Handling Equipment" data-ar="معدات معالجة المواد">تأجير معدات مناولة المواد في السعودية</h1>
+            <p class="category-description" data-en="Essential equipment for warehouses, distribution centers, and construction sites" data-ar="معدات أساسية للمستودعات ومراكز التوزيع ومواقع البناء">معدات أساسية للمستودعات ومراكز التوزيع ومواقع البناء. حلول فعالة لحركة المواد والتكديس.</p>
+        </div>
+        
+        <!-- Hidden SEO Content -->
+        <div class="seo-content" style="display: none;">
+            <h2>حلول مناولة المواد للمستودعات ومواقع البناء</h2>
+            <p>تقدم شركة <strong>رفع العالمية</strong> خدمة تأجير معدات مناولة المواد المتكاملة للمستودعات ومراكز التوزيع ومواقع البناء في المملكة العربية السعودية. نحن نوفر جميع أنواع معدات المناولة لتحسين كفاءة العمليات اللوجستية.</p>
+            
+            <h3>أنواع معدات المناولة المتوفرة للايجار:</h3>
+            <ul>
+                <li><strong>رافعات شوكية (Forklifts)</strong> - لجميع أنواع أعمال التحميل والتفريغ</li>
+                <li><strong>رافعات تلسكوبية (Telescopic Forklifts)</strong> - للمدى الطويل والأحمال الثقيلة</li>
+                <li><strong>عربات ناقلة يدوية (Hand Pallet Trucks)</strong> - للمستودعات والمخازن</li>
+                <li><strong>شاحنات مع ذراع معالجة (Trucks with Manipulator)</strong> - للتوصيل والتفريغ</li>
+                <li><strong>رافعات رصيف (Dock Levellers)</strong> - لمواقع التحميل والتفريغ</li>
+                <li><strong>معدات مناولة البليت (Pallet Handling Equipment)</strong> - لأنظمة التخزين</li>
+            </ul>
+            
+            <h3>مميزات معدات المناولة لدينا:</h3>
+            <ul>
+                <li>معدات حديثة ومتطورة</li>
+                <li>صيانة دورية وفحص مستمر</li>
+                <li>مشغلين مدربين ومعتمدين</li>
+                <li>أسعار تنافسية للايجار</li>
+                <li>توصيل المعدات إلى الموقع</li>
+            </ul>
         </div>
     </section>
 
@@ -70,95 +135,105 @@
                 <!-- Forklifts -->
                 <div class="equipment-card" data-equipment-id="4">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/Forklifts.png" alt="Forklift" loading="lazy">
+                        <img src="./assets/equipment/Forklifts.png" 
+                             alt="تأجير رافعات شوكية في السعودية - مناولة المواد" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Forklifts" data-ar="رافعات شوكية">Forklifts</h3>
-                    <p class="card-description" data-en="Essential material handling for warehouses and construction" data-ar="معالجة أساسية للمواد للمستودعات والبناء">Essential material handling for warehouses and construction</p>
+                    <h3 class="card-title" data-en="Forklifts" data-ar="رافعات شوكية">رافعات شوكية للايجار</h3>
+                    <p class="card-description" data-en="Essential material handling for warehouses and construction" data-ar="مناولة أساسية للمواد للمستودعات والبناء">معدات أساسية لمناولة المواد في المستودعات ومواقع البناء</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Capacity" data-ar="السعة">Capacity</span>
-                            <span class="spec-value">2 - 5 Tons</span>
+                            <span class="spec-label" data-en="Capacity" data-ar="السعة">السعة</span>
+                            <span class="spec-value">2 - 5 طن</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Lift Height" data-ar="ارتفاع الرفع">Lift Height</span>
-                            <span class="spec-value">3 - 6 m</span>
+                            <span class="spec-label" data-en="Lift Height" data-ar="ارتفاع الرفع">ارتفاع الرفع</span>
+                            <span class="spec-value">3 - 6 م</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Power Type" data-ar="نوع الطاقة">Power Type</span>
-                            <span class="spec-value">Diesel/Electric/LPG</span>
+                            <span class="spec-label" data-en="Power Type" data-ar="نوع الطاقة">نوع الطاقة</span>
+                            <span class="spec-value">ديزل/كهرباء/غاز</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="4" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="4" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
-   <!-- Hand Pallet Truck -->
+
+                <!-- Hand Pallet Truck -->
                 <div class="equipment-card" data-equipment-id="9">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/pallet-jack-carrying-stacked-cardboard-boxes.jpg" alt="Hand Pallet Truck" loading="lazy">
+                        <img src="./assets/equipment/pallet-jack-carrying-stacked-cardboard-boxes.jpg" 
+                             alt="تأجير عربات ناقلة يدوية في السعودية - مستودعات" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Hand Pallet Truck" data-ar="عربة ناقلة يدوية">Hand Pallet Truck</h3>
-                    <p class="card-description" data-en="Manual handling for efficient warehouse transport" data-ar="نقل يدوي فعال داخل المستودعات">Manual handling for efficient warehouse transport</p>
+                    <h3 class="card-title" data-en="Hand Pallet Truck" data-ar="عربة ناقلة يدوية">عربات ناقلة يدوية للايجار</h3>
+                    <p class="card-description" data-en="Manual handling for efficient warehouse transport" data-ar="نقل يدوي فعال داخل المستودعات">نقل يدوي فعال للمواد والبضائع داخل المستودعات والمخازن</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Capacity" data-ar="السعة">Capacity</span>
-                            <span class="spec-value">2 - 3 Tons</span>
+                            <span class="spec-label" data-en="Capacity" data-ar="السعة">السعة</span>
+                            <span class="spec-value">2 - 3 طن</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Fork Length" data-ar="طول الشوكات">Fork Length</span>
-                            <span class="spec-value">1.2 m</span>
+                            <span class="spec-label" data-en="Fork Length" data-ar="طول الشوكات">طول الشوكات</span>
+                            <span class="spec-value">1.2 م</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Fork Width" data-ar="عرض الشوكات">Fork Width</span>
-                            <span class="spec-value">520-685 mm</span>
+                            <span class="spec-label" data-en="Fork Width" data-ar="عرض الشوكات">عرض الشوكات</span>
+                            <span class="spec-value">520-685 ملم</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="9" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="9" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
 
                 <!-- Truck with Manipulator -->
                 <div class="equipment-card" data-equipment-id="10">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/crane_tauck_white.png" alt="Truck with Manipulator Arm" loading="lazy">
+                        <img src="./assets/equipment/crane_tauck_white.png" 
+                             alt="تأجير شاحنات مع ذراع معالجة في السعودية" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Truck with Manipulator" data-ar="شاحنة مع ذراع معالجة">Truck with Manipulator</h3>
-                    <p class="card-description" data-en="Versatile loading & unloading with hydraulic arm" data-ar="تحميل وتفريغ متعدد الاستخدامات بذراع هيدروليكي">Versatile loading & unloading with hydraulic arm</p>
+                    <h3 class="card-title" data-en="Truck with Manipulator" data-ar="شاحنة مع ذراع معالجة">شاحنات مع ذراع معالجة للايجار</h3>
+                    <p class="card-description" data-en="Versatile loading & unloading with hydraulic arm" data-ar="تحميل وتفريغ متعدد الاستخدامات بذراع هيدروليكي">تحميل وتفريغ متعدد الاستخدامات بذراع هيدروليكي للتوصيل والتفريغ</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Capacity" data-ar="السعة">Capacity</span>
-                            <span class="spec-value">1,000 kg</span>
+                            <span class="spec-label" data-en="Capacity" data-ar="السعة">السعة</span>
+                            <span class="spec-value">1,000 كجم</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Reach" data-ar="المدى">Reach</span>
-                            <span class="spec-value">7 meters</span>
+                            <span class="spec-label" data-en="Reach" data-ar="المدى">المدى</span>
+                            <span class="spec-value">7 أمتار</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Engine Power" data-ar="قوة المحرك">Engine Power</span>
-                            <span class="spec-value">150 HP</span>
+                            <span class="spec-label" data-en="Engine Power" data-ar="قوة المحرك">قوة المحرك</span>
+                            <span class="spec-value">150 حصان</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="10" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="10" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
+
                 <!-- Telescopic Forklifts -->
                 <div class="equipment-card" data-equipment-id="5">
                     <div class="equipment-image">
-                        <img src="./assets/equipment/Telescopic Forklifts.jpeg" alt="Telescopic Forklift" loading="lazy">
+                        <img src="./assets/equipment/Telescopic Forklifts.jpeg" 
+                             alt="تأجير رافعات شوكية تلسكوبية في السعودية" 
+                             loading="lazy">
                     </div>
-                    <h3 class="card-title" data-en="Telescopic Forklifts" data-ar="رافعات شوكية تلسكوبية">Telescopic Forklifts</h3>
-                    <p class="card-description" data-en="Extended reach for complex material handling operations" data-ar="مدى ممتد لعمليات معالجة المواد المعقدة">Extended reach for complex material handling operations</p>
+                    <h3 class="card-title" data-en="Telescopic Forklifts" data-ar="رافعات شوكية تلسكوبية">رافعات شوكية تلسكوبية للايجار</h3>
+                    <p class="card-description" data-en="Extended reach for complex material handling operations" data-ar="مدى ممتد لعمليات معالجة المواد المعقدة">مدى ممتد لعمليات معالجة المواد المعقدة والتكديس على ارتفاعات</p>
                     <div class="card-specs">
                         <div class="spec">
-                            <span class="spec-label" data-en="Reach" data-ar="المدى">Reach</span>
-                            <span class="spec-value">Up to 3.5m</span>
+                            <span class="spec-label" data-en="Reach" data-ar="المدى">المدى</span>
+                            <span class="spec-value">حتى 3.5 م</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Capacity" data-ar="السعة">Capacity</span>
-                            <span class="spec-value">2.5 - 3.5 Tons</span>
+                            <span class="spec-label" data-en="Capacity" data-ar="السعة">السعة</span>
+                            <span class="spec-value">2.5 - 3.5 طن</span>
                         </div>
                         <div class="spec">
-                            <span class="spec-label" data-en="Lift Height" data-ar="ارتفاع الرفع">Lift Height</span>
-                            <span class="spec-value">Up to 7m</span>
+                            <span class="spec-label" data-en="Lift Height" data-ar="ارتفاع الرفع">ارتفاع الرفع</span>
+                            <span class="spec-value">حتى 7 م</span>
                         </div>
                     </div>
-                    <button class="card-button rent-now" data-equipment-id="5" data-en="Rent Now" data-ar="استأجر الآن">Rent Now</button>
+                    <button class="card-button rent-now" data-equipment-id="5" data-en="Rent Now" data-ar="استأجر الآن">استأجر الآن</button>
                 </div>
             </div>
         </div>
@@ -167,78 +242,47 @@
     <!-- Why Choose Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 class="section-title" data-en="Why Choose Our Material Handling Equipment?" data-ar="لماذا تختار معدات معالجة المواد لدينا؟">Why Choose Our Material Handling Equipment?</h2>
+            <h2 class="section-title" data-en="Why Choose Our Material Handling Equipment?" data-ar="لماذا تختار معدات المناولة لدينا؟">لماذا تختار معدات مناولة المواد من رفع العالمية؟</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Flexible Options" data-ar="خيارات مرنة">Flexible Options</h3>
-                    <p data-en="Diesel, electric, and LPG models available" data-ar="نماذج ديزل وكهربائية وغاز متاحة">Diesel, electric, and LPG models available</p>
+                    <h3 data-en="Flexible Options" data-ar="خيارات مرنة">خيارات متنوعة</h3>
+                    <p data-en="Diesel, electric, and LPG models available" data-ar="موديلات ديزل وكهربائية وغاز متاحة">موديلات ديزل وكهربائية وغاز متاحة حسب احتياجات العميل</p>
                 </div>
+                
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Certified Operators" data-ar="مشغلون معتمدون">Certified Operators</h3>
-                    <p data-en="Trained and licensed professionals" data-ar="متخصصون مدربون ومرخصون">Trained and licensed professionals</p>
+                    <h3 data-en="Certified Operators" data-ar="مشغلون معتمدون">مشغلون معتمدون</h3>
+                    <p data-en="Trained and licensed professionals" data-ar="محترفون مدربون ومرخصون">مشغلون مدربون ومرخصون لتشغيل جميع أنواع المعدات</p>
                 </div>
+                
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Competitive Pricing" data-ar="أسعار تنافسية">Competitive Pricing</h3>
-                    <p data-en="Best rates in the market" data-ar="أفضل الأسعار في السوق">Best rates in the market</p>
+                    <h3 data-en="Competitive Pricing" data-ar="أسعار تنافسية">أسعار تنافسية</h3>
+                    <p data-en="Best rates in the market" data-ar="أفضل الأسعار في السوق">أفضل أسعار تأجير معدات المناولة في السوق السعودي</p>
                 </div>
+                
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3 data-en="Quick Delivery" data-ar="توصيل سريع">Quick Delivery</h3>
-                    <p data-en="Same-day delivery available" data-ar="توصيل في نفس اليوم متاح">Same-day delivery available</p>
+                    <h3 data-en="Quick Delivery" data-ar="توصيل سريع">توصيل سريع</h3>
+                    <p data-en="Same-day delivery available" data-ar="توصيل في نفس اليوم متاح">توصيل المعدات إلى موقع العمل في نفس اليوم عند الطلب</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rental Contact Modal -->
-    <div class="modal" id="rentalModal">
-        <div class="modal-content rental-modal">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-header">
-                <h2 data-en="Rent Equipment" data-ar="استأجر المعدات">Rent Equipment</h2>
-                <p id="rentalEquipmentName">Equipment Name</p>
-            </div>
-            <div class="modal-body">
-                <p class="rental-intro" data-en="Choose your preferred contact method:" data-ar="اختر طريقة الاتصال المفضلة لديك:">Choose your preferred contact method:</p>
-                <div class="rental-buttons">
-                    <a href="https://wa.me/966534672153" class="rental-btn whatsapp-main" target="_blank" rel="noopener noreferrer">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
-                        </svg>
-                        <div>
-                            <div class="btn-title" data-en="Chat on WhatsApp" data-ar="تحدث على واتساب">Chat on WhatsApp</div>
-                            <div class="btn-subtitle">+966 53 467 2153</div>
-                        </div>
-                    </a>
-                    <a href="mailto:info@rafeglobal.com" class="rental-btn email-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <div>
-                            <div class="btn-title" data-en="Send Email" data-ar="أرسل بريد إلكتروني">Send Email</div>
-                            <div class="btn-subtitle" data-en="Detailed Quote" data-ar="عرض سعر مفصل">Detailed Quote</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p data-en="© 2024 Rafe Global Equipment. All rights reserved." data-ar="© 2024 رفع العالمية للمعدات. جميع الحقوق محفوظة.">© 2024 Rafe Global Equipment. All rights reserved.</p>
+                <p data-en="© 2025 Rafe Global Equipment. All rights reserved." 
+                   data-ar="© 2025 رفع العالمية للمعدات. جميع الحقوق محفوظة.">
+                   © 2025 رفع العالمية للمعدات. جميع الحقوق محفوظة.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Menu Overlay -->
-    <div class="menu-overlay"></div>
-
-    <script src="./js/script.js?v=2.1"></script>
+    <script src="./js/script.js?v=2.2"></script>
 </body>
 </html>
