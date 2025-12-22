@@ -33,4 +33,4 @@ Allow: /?lang=ar
 
 User-agent: Baiduspider
 Allow: /
-Allow: /?lang=ar
+Allow: /?lang=ar 
