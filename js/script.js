@@ -131,12 +131,12 @@ function setupProgressBar() {
     progressBar.className = 'progress-bar';
     document.body.appendChild(progressBar);
     
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', throttle(() => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         scrollProgress = (scrollTop / scrollHeight) * 100;
         progressBar.style.width = `${scrollProgress}%`;
-    });
+    }, 100)); // Throttle to run at most every 100ms to improve performance
 }
 
 // --- LANGUAGE SWITCHER ---

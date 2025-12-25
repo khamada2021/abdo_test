@@ -311,3 +311,38 @@ body[dir="rtl"] .back-link {
 body[dir="rtl"] .spec {
     flex-direction: row-reverse;
 }
+
+
+/* ALTERNATIVE: STACK ON MOBILE */
+@media (max-width: 480px) {
+    .spec {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+    
+    .spec-label,
+    .spec-value {
+        width: 100%;
+        min-width: auto;
+        text-align: left;
+    }
+    
+    .spec-value {
+        color: var(--accent-gold);
+        font-weight: 700;
+        padding-left: 10px;
+    }
+}
+
+/* RTL for stacked layout */
+body[dir="rtl"] .spec {
+    align-items: flex-end;
+}
+
+body[dir="rtl"] .spec-value {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 10px;
+}
