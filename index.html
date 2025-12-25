@@ -131,11 +131,17 @@
     <!-- Hero Section -->
     <section class="hero" id="home" itemscope itemtype="https://schema.org/WPHeader">
         <div class="hero-background">
-            <video autoplay muted loop playsinline class="hero-video" aria-label="فيديو لمعدات البناء الثقيلة">
-                <source src="./assets/hero-bg.mp4" type="video/mp4">
-                <source src="./assets/hero-bg.webm" type="video/webm">
-                <img src="./assets/hero-fallback.jpg" alt="معدات بناء ثقيلة تعمل في موقع بناء">
-            </video>
+            <!-- NEW: Lighter & faster -->
+<div class="hero-background">
+    <!-- Mobile: Show image instead -->
+    <picture>
+        <source media="(max-width: 768px)" 
+                srcset="./assets/hero-mobile.jpg">
+        <img src="./assets/hero-desktop.jpg" 
+             alt="معدات بناء"
+             loading="eager">
+    </picture>
+</div>
             <div class="hero-overlay"></div>
         </div>
 
@@ -161,7 +167,9 @@
             </div>
             <div class="showcase-grid">
                 <div class="showcase-item">
-                    <img src="./assets/equipment/تأجير-كرينات-متنقلة-السعودية.webp" alt="كرينات متحركة" loading="lazy">
+                    <img src="./assets/equipment/تأجير-كرينات-متنقلة-السعودية.webp" alt="كرينات متحركة"width="400" 
+     height="300" 
+     loading="lazy">>
                     <div class="showcase-overlay">
                         <h3>كرينات متحركة</h3>
                         <p>رفع الأحمال الثقيلة للمشاريع الكبيرة</p>
